@@ -10,6 +10,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import ProjectList from '../projects/page';
 
 const user = {
   name: "Jadson Tavares Santos",
@@ -222,14 +223,15 @@ export default function HomePage() {
               Home Content
             </div>
             <section id="projetos" className="mt-8">
-              <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
-                <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
-                  Projetos
+              <div className="  w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
+                <h2 className="text-3xl font-bold tracking-tight ">
+                  <span className="text-[#fca61e]">Ùltimos</span> Projetos
                 </h2>
                 {/* Projetos content */}
-                <p>Detalhes sobre os projetos...</p>
+                <ProjectList />
               </div>
             </section>
+
             <section id="sobre-mim" className="mt-8">
               <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
                 <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
@@ -239,6 +241,7 @@ export default function HomePage() {
                 <p>Informações sobre você...</p>
               </div>
             </section>
+
             <section id="contato" className="mt-8">
               <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
                 <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
