@@ -7,7 +7,7 @@ const AboutPage = () => {
     <div>
       <div>
         <section
-          className="container mb-5 mt-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]  transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
+          className="container mb-10 mt-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white  transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
           id="sobre-mim"
         >
           <div className="flex flex-row gap-10 responsive-about">
@@ -25,7 +25,8 @@ const AboutPage = () => {
                 <span className="text-[#fca61e]">TypeScript</span>, {""}
                 <span className="text-[#fca61e]">ReactTS</span>, {""}
                 <span className="text-[#fca61e]">NextJS</span>, {""}
-                <span className="tex[#fca61e]">NodeJS</span> {""}e entre outras.
+                <span className="text-[#fca61e]">NodeJS</span> {""}e entre
+                outras.
               </p>
               <p className="mb-4 w-96 font-semibold">
                 Estou em busca de novos desafios e oportunidades para aplicar
@@ -94,7 +95,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="bg-red-400 w-full flex justify-center items-center responsive-about-Image">
+            <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-about-Image">
               <div> foto</div>
             </div>
           </div>

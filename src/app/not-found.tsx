@@ -12,12 +12,12 @@ const NotFound = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <div className="text-center text-[blue]">
+      <div className="text-center text-[#fca61e]">
         <div className=" w-full flex justify-center items-center mb-5">
-        <Image src={foto} alt="404" width={300} height={300} />
+          <Image src={foto} alt="404" width={300} height={300} />
         </div>
         <h1 className="text-2xl font-bold mb-4">404 - Página não encontrada</h1>
-        <p className="text-gray-400">
+        <p className="text-white">
           A página que você está procurando não existe.
         </p>
       </div>
@@ -25,7 +25,7 @@ const NotFound = () => {
       <div className="pt-8">
         <a href="/" className="hover:underline">
           <button
-            className="bg-blue-700 hover:bg-blue-900 text-white px-8 py-2"
+            className="border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out text-white px-8 py-2"
             type="submit"
             onClick={() => handleHome()}
           >
