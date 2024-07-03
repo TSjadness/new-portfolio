@@ -16,12 +16,11 @@
   }
 }
 
-
-  /* color: #fed72f;  */
-  /* color: #fca61e;  */
-  /* background: #131318; */
-  /* background: #17171d; */
-  body {
+/* color: #fed72f;  */
+/* color: #fca61e;  */
+/* background: #131318; */
+/* background: #17171d; */
+body {
   background: #17171d;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -38,5 +37,35 @@ html {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-about {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .responsive-about-Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .responsive-about-Image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .responsive-about-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

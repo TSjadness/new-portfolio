@@ -4,6 +4,8 @@ import "./globals.css";
 import Providers from "@/provider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ProjectList from "@/components/projects/page";
+import AboutPage from "@/components/about-me/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           {children}
+          <AboutPage />
+          <ProjectList />
           <ToastContainer />
         </Providers>
       </body>

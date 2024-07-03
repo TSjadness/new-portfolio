@@ -11,6 +11,8 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ProjectList from '../projects/page';
+import aboutfoto from "@/images/logo-about.png";
+import Image from 'next/image';
 
 const user = {
   name: "Jadson Tavares Santos",
@@ -44,11 +46,14 @@ export default function HomePage() {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="hidden sm:flex items-center flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
-                      />
+                      <a href="/">
+                        <Image
+                          src={aboutfoto}
+                          alt="about foto"
+                          width={100}
+                          height={100}
+                        />
+                      </a>
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -214,43 +219,38 @@ export default function HomePage() {
         </header>
         <main>
           <div className="">
-            {/* Your content */}
-            <div
+            {/* <div
               id="home"
               className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-white"
             >
-              {/* Home content */}
               Home Content
-            </div>
-            <section id="projetos" className="mt-8">
+            </div> */}
+            {/* <section id="projetos" className="mt-8">
               <div className="  w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
                 <h2 className="text-3xl font-bold tracking-tight ">
                   <span className="text-[#fca61e]">Ùltimos</span> Projetos
                 </h2>
-                {/* Projetos content */}
                 <ProjectList />
               </div>
-            </section>
+            </section> */}
 
-            <section id="sobre-mim" className="mt-8">
+            {/* <section id="sobre-mim" className="mt-8">
               <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
                 <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
                   Sobre mim
                 </h2>
-                {/* Sobre mim content */}
                 <p>Informações sobre você...</p>
               </div>
-            </section>
+            </section> */}
 
-            <section id="contato" className="mt-8">
+            {/* <section id="contato" className="mt-8">
               <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
                 <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
                   Contato
                 </h2>
-                {/* Contato content */}
                 <p>Formas de contato...</p>
               </div>
-            </section>
+            </section> */}
           </div>
         </main>
       </div>
