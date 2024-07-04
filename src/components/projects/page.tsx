@@ -24,7 +24,7 @@ const Card = ({
   title: string;
   description: string;
 }) => (
-  <div className="mx-3 mt-6 flex flex-col self-start rounded-lg bg-[#2d2d2d] text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 max-w-md transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10">
+  <div className="mx-3 mt-6 mb-6 flex flex-col self-start rounded-lg bg-[#2d2d2d] text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 max-w-md transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 ">
     <a href={href}>
       <img className="rounded-t-lg" src={imgSrc} alt={imgAlt} />
     </a>
@@ -39,7 +39,7 @@ const Card = ({
 
 const ProjectList = () => (
   <section
-    className="container mb-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318] "
+    className="container mb-24 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318] responsive-projects "
     id="projetos"
   >
     <h2 className="text-3xl font-bold tracking-tight mt-5">

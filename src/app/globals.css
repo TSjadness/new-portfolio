@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -22,15 +24,14 @@
 /* background: #17171d; */
 body {
   background: #17171d;
+  font-family: 'JetBrains Mono', Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
+
   scroll-behavior: smooth;
 }
 
@@ -54,6 +55,10 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    p{
+      text-align: center;
+    }
   }
 
   .responsive-about-Image{
@@ -84,6 +89,22 @@ html {
     gap: var(--gap);
     margin-left: -25px;
     animation: scroll 1s linear infinite;
+  }
+
+  .responsive-statistic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .responsive-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 

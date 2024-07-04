@@ -18,8 +18,8 @@ const IconListItem = ({ Icon }: { Icon: React.ComponentType }) => (
 
 const StockTicker = () => {
   return (
-    <div className="stock-ticker flex">
-      <ul className="flex mr-12">
+    <div className="stock-ticker flex  items-center justify-center">
+      <ul className="flex  ">
         {[FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaDocker, FaGithub].map(
           (Icon, index) => (
             <IconListItem key={index} Icon={Icon} />
@@ -27,7 +27,8 @@ const StockTicker = () => {
         )}
       </ul>
 
-      <ul className="flex ml-40">
+      <ul className="flex  mr-48">
+        <p className="bg-blue-500 text-white w-1">{" "}</p>
         {[
           FaNode,
           FaReact,

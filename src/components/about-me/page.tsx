@@ -12,23 +12,23 @@ const AboutPage = () => {
         >
           <div className="flex flex-row gap-10 responsive-about">
             <div className="w-full flex flex-col  responsive-about-Text">
-              <p className="text-xl font-normal mb-2">Front-end Developer</p>
+              <p className="text-xl font-normal mb-2 f">Front-end Developer</p>
 
               <h1 className="text-5xl md:text-6xl font-bold">Olá eu sou</h1>
 
               <h1 className="text-4xl md:text-7xl font-bold mb-4 text-[#fca61e]">
                 Jadson Santos
               </h1>
-              <p className="mb-4  w-96 font-semibold  ">
+              <p className="mb-4 text-lg  max-w-md font-semibold leading-6 text-start">
                 Estou na área há quase 2 anos profissionalmente. Atualmente
                 estou estudando e me aprimorando em tecnologias como{" "}
-                <span className="text-[#fca61e]">TypeScript</span>, {""}
-                <span className="text-[#fca61e]">ReactTS</span>, {""}
-                <span className="text-[#fca61e]">NextJS</span>, {""}
-                <span className="text-[#fca61e]">NodeJS</span> {""}e entre
+                <strong className="text-[#fca61e]">TypeScript</strong>, {""}
+                <strong className="text-[#fca61e]">ReactTS</strong>, {""}
+                <strong className="text-[#fca61e]">NextJS</strong>, {""}
+                <strong className="text-[#fca61e]">NodeJS</strong> {""}e entre
                 outras.
               </p>
-              <p className="mb-4 w-96 font-semibold">
+              <p className="mb-4 text-lg  max-w-md  leading-6 font-semibold text-start">
                 Estou em busca de novos desafios e oportunidades para aplicar
                 meus conhecimentos e habilidades, sempre utilizando as melhores
                 tecnologias do mercado, com segurança e foco em qualidade.

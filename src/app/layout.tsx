@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ProjectList from "@/components/projects/page";
 import AboutPage from "@/components/about-me/page";
 import TecnologyPage from "@/components/tecnology/page";
+import Statistics from "@/components/Statistic/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <Providers>
           {children}
           <AboutPage />
+          <Statistics />
           <ProjectList />
           <TecnologyPage />
           <ToastContainer />
