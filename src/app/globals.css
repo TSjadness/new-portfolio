@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,20 +23,30 @@
 /* background: #17171d; */
 body {
   background: #17171d;
-  font-family: 'JetBrains Mono', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "JetBrains Mono", Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-
   scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 1024px) {
+  .responsive-statics {
+    display: flex;
+    width: auto;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -49,25 +58,26 @@ html {
     align-items: center;
   }
 
-  .responsive-about-Text{
+  .responsive-about-Text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 1rem;
 
-    p{
+    p {
       text-align: center;
     }
   }
 
-  .responsive-about-Image{
+  .responsive-about-Image {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .responsive-about-list{
+  .responsive-about-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +101,7 @@ html {
     animation: scroll 1s linear infinite;
   }
 
-  .responsive-statistic{
+  .responsive-statistic {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,15 +109,15 @@ html {
     text-align: center;
   }
 
-  .responsive-projects{
+  .responsive-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 1rem;
   }
 }
-
 
 .stock-ticker {
   padding-block: 8px;
@@ -139,4 +149,3 @@ html {
     transform: translateX(calc(-50% - var(--gap)));
   }
 }
-

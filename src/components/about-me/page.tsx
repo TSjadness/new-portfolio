@@ -2,24 +2,25 @@ import React from "react";
 import { GoDownload } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import "animate.css/animate.min.css";
+
+
 const AboutPage = () => {
   return (
     <div>
       <div>
         <section
-          className="container mb-10 mt-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white  transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
+          className="container mb-10 mt-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp"
           id="sobre-mim"
         >
           <div className="flex flex-row gap-10 responsive-about">
-            <div className="w-full flex flex-col  responsive-about-Text">
+            <div className="w-full flex flex-col responsive-about-Text">
               <p className="text-xl font-normal mb-2 f">Front-end Developer</p>
-
               <h1 className="text-5xl md:text-6xl font-bold">Olá eu sou</h1>
-
               <h1 className="text-4xl md:text-7xl font-bold mb-4 text-[#fca61e]">
                 Jadson Santos
               </h1>
-              <p className="mb-4 text-lg  max-w-md font-semibold leading-6 text-start">
+              <p className="mb-4 text-lg max-w-md font-semibold leading-6 text-start">
                 Estou na área há quase 2 anos profissionalmente. Atualmente
                 estou estudando e me aprimorando em tecnologias como{" "}
                 <strong className="text-[#fca61e]">TypeScript</strong>, {""}
@@ -28,7 +29,7 @@ const AboutPage = () => {
                 <strong className="text-[#fca61e]">NodeJS</strong> {""}e entre
                 outras.
               </p>
-              <p className="mb-4 text-lg  max-w-md  leading-6 font-semibold text-start">
+              <p className="mb-4 text-lg max-w-md leading-6 font-semibold text-start">
                 Estou em busca de novos desafios e oportunidades para aplicar
                 meus conhecimentos e habilidades, sempre utilizando as melhores
                 tecnologias do mercado, com segurança e foco em qualidade.
@@ -52,7 +53,7 @@ const AboutPage = () => {
                         title="Ir para o linkedin"
                         target="_blank"
                       >
-                        <FaLinkedinIn className="text-4xl text-[#fca61e]  border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
+                        <FaLinkedinIn className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
                       </a>
                     </li>
 
@@ -62,7 +63,7 @@ const AboutPage = () => {
                         title="Enviar mensagem para whatsapp"
                         target="_blank"
                       >
-                        <FaWhatsapp className="text-4xl text-[#fca61e]  border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
+                        <FaWhatsapp className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
 
                         <link
                           rel="stylesheet"
@@ -78,7 +79,7 @@ const AboutPage = () => {
                         title="Ir para o github"
                         target="_blank"
                       >
-                        <IoLogoGithub className="text-4xl text-[#fca61e]  border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
+                        <IoLogoGithub className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
                       </a>
                     </li>
                     <li>
@@ -87,7 +88,7 @@ const AboutPage = () => {
                         title="Ir para o instagram"
                         target="_blank"
                       >
-                        <FaInstagram className="text-4xl text-[#fca61e]  border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
+                        <FaInstagram className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
                       </a>
                     </li>
                   </ul>
@@ -95,7 +96,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-about-Image">
+            <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-about-Image animate__animated animate__fadeIn">
               <div> foto</div>
             </div>
           </div>
