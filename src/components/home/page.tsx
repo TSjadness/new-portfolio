@@ -21,8 +21,9 @@ const user = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation = [
-  { name: "Home", href: "#home", current: true },
+  { name: "Home", href: "#home", current: false },
   { name: "Projetos", href: "#projetos", current: false },
+  {name: "Trabalhos", href: "#trabalhos", current: false},
   { name: "Sobre mim", href: "#sobre-mim", current: false },
   { name: "Contato", href: "#contato", current: false },
 ];
@@ -63,9 +64,9 @@ export default function HomePage() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? "bg-gray-900 text-[#fca61e]"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-[#fed72f]",
-                              "rounded-md px-3 py-2 text-md font-medium"
+                                ? " text-[#fca61e]"
+                                : "text-gray-300 hover:border-b hover:border-[#fed72f] hover:text-[#fed72f]",
+                              "px-3 py-2 text-md font-medium"
                             )}
                             aria-current={item.current ? "page" : undefined}
                           >

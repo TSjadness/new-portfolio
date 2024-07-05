@@ -29,7 +29,6 @@ const Statistics = () => {
           <Statistic value={3} label="+ Projetos Concluídos" />
           <Statistic value={5} label="+ Tecnologias" />
           <Statistic value={100} label="+ Commits realizados" />
-          <Statistic value={100} label="+ Commits realizados" />
         </div>
       </div>
     </div>

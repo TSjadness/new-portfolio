@@ -8,7 +8,7 @@ export function AppRoutes() {
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={<DashboardPage />} /> */}
-        <Route path="/" element={<HomePage />} />\
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );
