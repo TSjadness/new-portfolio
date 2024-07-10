@@ -28,7 +28,7 @@ const StockTicker = () => {
       </ul>
 
       <ul className="flex  mr-48 p-5">
-        <p className="bg-blue-500 text-white w-1"> </p>
+        <p className=" text-white w-1"> </p>
         {[
           FaNode,
           FaReact,
