@@ -65,7 +65,7 @@ export default function HomePage() {
                             className={classNames(
                               item.current
                                 ? " text-[#fca61e]"
-                                : "text-gray-300 hover:border-b hover:border-[#fed72f] hover:text-[#fed72f]",
+                                : "text-gray-300 hover:border-b hover:border-[#fca61e] hover:text-[#fca61e]",
                               "px-3 py-2 text-md font-medium"
                             )}
                             aria-current={item.current ? "page" : undefined}
@@ -211,47 +211,11 @@ export default function HomePage() {
           )}
         </Disclosure>
 
-        <header className="shadow text-[#fca61e]">
+        {/* <header className="shadow text-[#fca61e]">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           </div>
-        </header>
-        <main>
-          <div className="">
-            {/* <div
-              id="home"
-              className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-white"
-            >
-              Home Content
-            </div> */}
-            {/* <section id="projetos" className="mt-8">
-              <div className="  w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
-                <h2 className="text-3xl font-bold tracking-tight ">
-                  <span className="text-[#fca61e]">Ùltimos</span> Projetos
-                </h2>
-                <ProjectList />
-              </div>
-            </section> */}
-
-            {/* <section id="sobre-mim" className="mt-8">
-              <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
-                <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
-                  Sobre mim
-                </h2>
-                <p>Informações sobre você...</p>
-              </div>
-            </section> */}
-
-            {/* <section id="contato" className="mt-8">
-              <div className="border-2 border-red-600 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318]">
-                <h2 className="text-2xl font-bold tracking-tight text-[#fca61e]">
-                  Contato
-                </h2>
-                <p>Formas de contato...</p>
-              </div>
-            </section> */}
-          </div>
-        </main>
+        </header> */}
       </div>
     </>
   );

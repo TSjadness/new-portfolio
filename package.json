@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@designbycode/tailwindcss-text-stroke": "^1.2.1",
     "@headlessui/react": "^2.1.1",
     "@heroicons/react": "^2.1.4",
     "@tanstack/react-query": "^5.49.2",
@@ -16,6 +17,7 @@
     "@tanstack/react-query-next-experimental": "^5.49.2",
     "@types/react-toastify": "^4.1.0",
     "animate.css": "^4.1.1",
+    "framer-motion": "^11.2.14",
     "next": "14.2.4",
     "react": "^18",
     "react-countup": "^6.5.3",
@@ -33,6 +35,7 @@
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-text-fill-stroke": "^1.1.2",
     "typescript": "^5"
   }
 }

@@ -10,7 +10,7 @@ const AboutPage = () => {
     <div>
       <div>
         <section
-          className="container mb-10 mt-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp"
+          className="container mb-10 mt-20 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp"
           id="sobre-mim"
         >
           <div className="flex flex-row gap-10 responsive-about">

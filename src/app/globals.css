@@ -88,6 +88,28 @@ html {
     align-items: center;
   }
 
+  .responsive-job{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .responsive-button-job{
+    z-index: 10;
+    position: relative;
+    top: -33rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 3rem;
+      padding: 0;
+    }
+  }
+
   .stock-ticker {
     overflow: hidden;
     user-select: none;

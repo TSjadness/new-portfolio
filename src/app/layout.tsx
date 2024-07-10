@@ -8,7 +8,8 @@ import ProjectList from "@/components/projects/page";
 import AboutPage from "@/components/about-me/page";
 import TecnologyPage from "@/components/tecnology/page";
 import Statistics from "@/components/Statistic/page";
-import Jobspage from "@/components/jobs/page";
+import Jobspage from "@/components/works/page";
+import PersonalPage from "@/components/personal-me/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,9 @@ export default function RootLayout({
           {children}
           <AboutPage />
           <Statistics />
-          <Jobspage />
+          <PersonalPage />
           <ProjectList />
+          <Jobspage />
           <TecnologyPage />
           <ToastContainer />
         </Providers>
