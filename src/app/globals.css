@@ -110,6 +110,28 @@ html {
     }
   }
 
+    .responsive-button-work{
+    /* background-color: aqua; */
+    /* z-index: 10;
+    position: relative;
+    top: -35rem;
+    display: flex; */
+    justify-content: space-between;
+
+    button {
+      margin-right: 0.1rem;
+      margin-left: 0.1rem;
+      width: 3rem;
+      padding: 0;
+    }
+  }
+
+  .responsive-box{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .stock-ticker {
     overflow: hidden;
     user-select: none;
