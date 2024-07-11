@@ -82,9 +82,9 @@ const PersonalPage = () => {
       // title: "Sobre mim",
       content: (
         <div className="flex flex-col font-semibold">
-          <p className="text-2xl mb-4">{aboutMe.description}</p>
+          <p className="text-2xl mb-4 text-justify">{aboutMe.description}</p>
 
-          <div className="bg-black flex flex-row gap-5 items-start justify-start">
+          <div className="bg-black flex flex-row gap-5 items-start justify-start responsive-ul">
             <ul className="list-none ">
               <li className="flex flex-row items-center justify-start gap-2 mb-4">
                 <strong className="text-lg text-gray-400">Nome:</strong>{" "}
@@ -158,54 +158,54 @@ const PersonalPage = () => {
         </div>
       ),
     },
-    {
-      title: "Experiência",
-      content: experiences.map((exp, index) => (
-        <div key={index} className="mb-4 grid grid-cols-1">
-          <div className="bg-gray-600 p-2 rounded-lg">
-          <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-          <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
-          <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
-          <p className="text-lg">{exp.description}</p>
-          </div>
-        </div>
-      )),
-    },
-    {
-      title: "Educação",
-      content: education.map((edu, index) => (
-        <div key={index} className="mb-4">
-          <h3 className="text-2xl font-bold mb-1">{edu.title}</h3>
-          <h4 className="text-xl text-gray-400 mb-1">{edu.institution}</h4>
-          <p className="text-sm text-gray-500 mb-2">{edu.period}</p>
-          <p className="text-lg">{edu.description}</p>
-        </div>
-      )),
-    },
-    {
-      title: "Minhas Habilidades",
-      content: (
-        <ul className="flex flex-wrap gap-4">
-          {skills.map((skill, index) => (
-            <li
-              key={index}
-              className="text-lg mb-1 relative group text-[#fca61e]"
-              title={skill.name}
-            >
-              <div className="text-4xl  bg-red-700">
-                <div className="text-5xl p-5 bg-gray-700">
-                {skill.icon}
-                </div>
-              </div>
-              <span className="absolute w-full bottom-full left-1/2 transform -translate-x-1/2 bg-black text-[#fca61e]
-               text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                {skill.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ),
-    },
+    // {
+    //   title: "Experiência",
+    //   content: experiences.map((exp, index) => (
+    //     <div key={index} className="mb-4 grid grid-cols-1">
+    //       <div className="bg-gray-600 p-2 rounded-lg">
+    //       <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
+    //       <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
+    //       <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
+    //       <p className="text-lg">{exp.description}</p>
+    //       </div>
+    //     </div>
+    //   )),
+    // },
+    // {
+    //   title: "Educação",
+    //   content: education.map((edu, index) => (
+    //     <div key={index} className="mb-4">
+    //       <h3 className="text-2xl font-bold mb-1">{edu.title}</h3>
+    //       <h4 className="text-xl text-gray-400 mb-1">{edu.institution}</h4>
+    //       <p className="text-sm text-gray-500 mb-2">{edu.period}</p>
+    //       <p className="text-lg">{edu.description}</p>
+    //     </div>
+    //   )),
+    // },
+    // {
+    //   title: "Minhas Habilidades",
+    //   content: (
+    //     <ul className="flex flex-wrap gap-4">
+    //       {skills.map((skill, index) => (
+    //         <li
+    //           key={index}
+    //           className="text-lg mb-1 relative group text-[#fca61e]"
+    //           title={skill.name}
+    //         >
+    //           <div className="text-4xl  bg-red-700">
+    //             <div className="text-5xl p-5 bg-gray-700">
+    //             {skill.icon}
+    //             </div>
+    //           </div>
+    //           <span className="absolute w-full bottom-full left-1/2 transform -translate-x-1/2 bg-black text-[#fca61e]
+    //            text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+    //             {skill.name}
+    //           </span>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   ),
+    // },
   ];
 
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -232,10 +232,10 @@ const PersonalPage = () => {
       className="container mb-24 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#131318] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
       id="about-me"
     >
-      <h2 className="text-3xl font-bold tracking-tight mt-5">
+      <h2 className="text-3xl font-bold tracking-tight mt-5 flex items-center justify-center">
         <span className="text-[#fca61e]">Sobre</span> Mim
       </h2>
-      <p className="text-gray-400">
+      <p className="text-gray-400 sm:text-center">
         Um pouco sobre minha trajetória profissional e habilidades.
       </p>
       <div className="space-y-4 p-2 flex flex-col md:flex-row justify-start items-center bg-blue-700">
