@@ -161,11 +161,13 @@ const PersonalPage = () => {
     {
       title: "Experiência",
       content: experiences.map((exp, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} className="mb-4 grid grid-cols-1">
+          <div className="bg-gray-600 p-2 rounded-lg">
           <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
           <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
           <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
           <p className="text-lg">{exp.description}</p>
+          </div>
         </div>
       )),
     },
@@ -187,11 +189,16 @@ const PersonalPage = () => {
           {skills.map((skill, index) => (
             <li
               key={index}
-              className="text-lg mb-1 relative group"
+              className="text-lg mb-1 relative group text-[#fca61e]"
               title={skill.name}
             >
-              <div className="text-4xl">{skill.icon}</div>
-              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="text-4xl  bg-red-700">
+                <div className="text-5xl p-5 bg-gray-700">
+                {skill.icon}
+                </div>
+              </div>
+              <span className="absolute w-full bottom-full left-1/2 transform -translate-x-1/2 bg-black text-[#fca61e]
+               text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
                 {skill.name}
               </span>
             </li>
