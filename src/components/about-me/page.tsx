@@ -97,7 +97,7 @@ const AboutPage = () => {
             </div>
 
             <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-about-Image animate__animated animate__fadeIn">
-              <div> foto</div>
+              <div className="order-1 xl:order-none mb-8 xl:mb-0"> foto</div>
             </div>
           </div>
         </section>

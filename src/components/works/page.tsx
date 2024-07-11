@@ -10,33 +10,14 @@ const Jobspage = () => {
   const jobs = [
     {
       title: "Desenvolvedor Front-end JR",
-      company: "D-GYM",
-      period: "abril de 2024 - abril de 2024 (1 mês)",
-      location: "São Paulo, Brasil",
-      description:
-        "Trabalhei na criação e manutenção de interfaces responsivas com React e Tailwind CSS, colaborando com equipes de design para implementar soluções inovadoras. Como membro chave da equipe de desenvolvimento, defini a estrutura e arquitetura do repositório do projeto com ReactJS e TypeScript, integrando APIs externas. Criei interfaces intuitivas para membros, instrutores e administradores, facilitando cadastro de aulas, agendamento de sessões e exibição de atividades em um calendário interativo.",
-      image: foto1,
-    },
-    {
-      title: "Desenvolvedor Front-end JR",
-      company: "Alpha Sistema",
-      period: "março de 2024 - abril de 2024 (2 meses)",
+      company: "Luck Viagens",
+      period: "outubro de 2022 - janeiro de 2023 (4 meses)",
       location: "Caruaru, Pernambuco, Brasil",
       description: `
-        No final do ciclo de desenvolvimento na Alpha Sistemas, fui convidado a integrar o time de desenvolvimento, focando em novas funcionalidades e correção de bugs em áreas críticas como produtos, clientes, fornecedores, estoque, vendas, finanças e relatórios. Assegurei a responsividade do site com Tailwind CSS e melhorei a acessibilidade em dispositivos móveis. Otimizei rotas e integrei APIs externas, utilizando bibliotecas JavaScript como axios, react-router-dom, e react-pdf.
+        Na Luck Viagens, atuei como desenvolvedor frontend Jr., criando e mantendo a aplicação web de pacotes de viagens com ReactTS e TypeScript. Realizei integrações com várias APIs externas para manter a plataforma atualizada e assegurei a segurança dos dados dos usuários, focando em autenticação e autorização. Aprendi a importância de escrever código limpo e modular e a seguir as melhores práticas de segurança, o que foi crucial para meu crescimento profissional e me preparou para futuros desafios.
       `,
       image: foto1,
     },
-    // {
-    //   title: "Desenvolvedor Front-end JR",
-    //   company: "COMEIA",
-    //   period: "outubro de 2022 - abril de 2024 (1 ano 7 meses)",
-    //   location: "Caruaru, Pernambuco, Brasil",
-    //   description: `
-    //     Sou desenvolvedor de software em início de carreira, formado em desenvolvimento Fullstack pela Comeia Labs, com destaque em web e backend (Node.js, React, TyperScript, Html e Css). Atuei como Desenvolvedor Frontend em projetos de alto desempenho, criando aplicações web, websites e bibliotecas personalizadas para otimizar o desempenho. Foco na excelência técnica e eficiência, seguindo normas e procedimentos rigorosos. Participei de discussões com clientes para esclarecer requisitos, mantendo monitoramento contínuo de sites e aplicativos.
-    //   `,
-    //   image: foto1,
-    // },
     {
       title: "Desenvolvedor Front-end JR",
       company: "Otur Viagens",
@@ -49,14 +30,33 @@ const Jobspage = () => {
     },
     {
       title: "Desenvolvedor Front-end JR",
-      company: "Luck Viagens",
-      period: "outubro de 2022 - janeiro de 2023 (4 meses)",
+      company: "Alpha Sistema",
+      period: "março de 2024 - abril de 2024 (2 meses)",
       location: "Caruaru, Pernambuco, Brasil",
       description: `
-        Na Luck Viagens, atuei como desenvolvedor frontend Jr., criando e mantendo a aplicação web de pacotes de viagens com ReactTS e TypeScript. Realizei integrações com várias APIs externas para manter a plataforma atualizada e assegurei a segurança dos dados dos usuários, focando em autenticação e autorização. Aprendi a importância de escrever código limpo e modular e a seguir as melhores práticas de segurança, o que foi crucial para meu crescimento profissional e me preparou para futuros desafios.
+        No final do ciclo de desenvolvimento na Alpha Sistemas, fui convidado a integrar o time de desenvolvimento, focando em novas funcionalidades e correção de bugs em áreas críticas como produtos, clientes, fornecedores, estoque, vendas, finanças e relatórios. Assegurei a responsividade do site com Tailwind CSS e melhorei a acessibilidade em dispositivos móveis. Otimizei rotas e integrei APIs externas, utilizando bibliotecas JavaScript como axios, react-router-dom, e react-pdf.
       `,
       image: foto1,
     },
+    {
+      title: "Desenvolvedor Front-end JR",
+      company: "D-GYM",
+      period: "abril de 2024 - abril de 2024 (1 mês)",
+      location: "São Paulo, Brasil",
+      description:
+        "Trabalhei na criação e manutenção de interfaces responsivas com React e Tailwind CSS, colaborando com equipes de design para implementar soluções inovadoras. Como membro chave da equipe de desenvolvimento, defini a estrutura e arquitetura do repositório do projeto com ReactJS e TypeScript, integrando APIs externas. Criei interfaces intuitivas para membros, instrutores e administradores, facilitando cadastro de aulas, agendamento de sessões e exibição de atividades em um calendário interativo.",
+      image: foto1,
+    },
+    // {
+    //   title: "Desenvolvedor Front-end JR",
+    //   company: "COMEIA",
+    //   period: "outubro de 2022 - abril de 2024 (1 ano 7 meses)",
+    //   location: "Caruaru, Pernambuco, Brasil",
+    //   description: `
+    //     Sou desenvolvedor de software em início de carreira, formado em desenvolvimento Fullstack pela Comeia Labs, com destaque em web e backend (Node.js, React, TyperScript, Html e Css). Atuei como Desenvolvedor Frontend em projetos de alto desempenho, criando aplicações web, websites e bibliotecas personalizadas para otimizar o desempenho. Foco na excelência técnica e eficiência, seguindo normas e procedimentos rigorosos. Participei de discussões com clientes para esclarecer requisitos, mantendo monitoramento contínuo de sites e aplicativos.
+    //   `,
+    //   image: foto1,
+    // },
   ];
 
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
@@ -109,8 +109,8 @@ const Jobspage = () => {
                   x: 1,
                   opacity: 1,
                   transition: {
-                    duration: 1.1,
-                    ease: "linear",
+                    duration: 1.8,
+                    ease: "easeOut",
                   },
                 },
               }}
