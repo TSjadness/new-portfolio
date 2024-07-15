@@ -167,13 +167,28 @@ html {
   }
 
   .responsive-ul{
-    background-color: aqua;
+    /* background-color: yellow; */
     display:flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-    text-align: justify-all;
+    align-items: center;
+    justify-content: center;
+    /* text-align: justify; */
+    width: auto;
+    font-size: 4rem;
+    
 
+    ul{
+      width: 100%;
+      /* background-color: red; */
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 110px;
+      gap: 0;
+      margin:0;
+    }
   }
 }
 
