@@ -88,7 +88,7 @@ html {
     align-items: center;
   }
 
-  .responsive-job{
+  .responsive-job {
     /* background-color: aqua; */
     display: flex;
     flex-direction: column-reverse;
@@ -97,7 +97,7 @@ html {
     width: auto;
   }
 
-  .responsive-button-job{
+  .responsive-button-job {
     z-index: 10;
     position: relative;
     top: -33rem;
@@ -110,7 +110,7 @@ html {
     }
   }
 
-    .responsive-button-work{
+  .responsive-button-work {
     /* background-color: aqua; */
     /* z-index: 10;
     position: relative;
@@ -126,7 +126,7 @@ html {
     }
   }
 
-  .responsive-box{
+  .responsive-box {
     /* background-color: blue; */
     display: flex;
     flex-direction: column-reverse;
@@ -166,29 +166,43 @@ html {
     padding: 1rem;
   }
 
-  .responsive-ul{
-    /* background-color: yellow; */
-    display:flex;
+  .responsive-aboutMe{
+    font-size: 1.2rem;
+  }
+  .responsive-ul {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* text-align: justify; */
     width: auto;
     font-size: 4rem;
-    
 
-    ul{
+    ul {
       width: 100%;
-      /* background-color: red; */
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-size: 110px;
       gap: 0;
-      margin:0;
+      margin: 0;
     }
+  }
+
+  .responsive-skills {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+
+
+    /* flex-direction: row; */
+      align-items: center;
+      justify-content: center;
+
   }
 }
 
@@ -222,5 +236,3 @@ html {
     transform: translateX(calc(-50% - var(--gap)));
   }
 }
-
-

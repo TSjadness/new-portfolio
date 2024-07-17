@@ -9,7 +9,12 @@ import {
   FaCss3Alt,
   FaJsSquare,
 } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiPresto } from "react-icons/si";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiPresto,
+  SiStyledcomponents,
+} from "react-icons/si";
 import foto1 from "@/images/foto-teste.jpg";
 
 const PersonalPage = () => {
@@ -75,155 +80,132 @@ const PersonalPage = () => {
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "API REST", icon: <SiPresto /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    {name: "Styled components" , icon: <SiStyledcomponents/>},
   ];
 
   const sections = [
-    // {
-    //   content: (
-    //     <div className="flex flex-col font-semibold">
-    //       <p className="text-2xl mb-4 text-justify">{aboutMe.description}</p>
+    {
+      content: (
+        <div className="flex flex-col font-semibold">
+          <p className="text-2xl mb-5 text-justify responsive-aboutMe">
+            {aboutMe.description}
+          </p>
 
-    //       <div className="bg-black flex flex-row gap-5 items-start justify-start responsive-ul">
-    //         <ul className="list-none ">
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Nome:</strong>{" "}
-    //             <p className="text-xl font-semibold text-white">
-    //               {aboutMe.details.nome}
-    //             </p>
-    //           </li>
+          <div className="flex flex-row gap-5 items-start justify-start responsive-ul">
+            <ul className="list-none ">
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Nome:</strong>{" "}
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.nome}
+                </p>
+              </li>
 
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Telefone:</strong>{" "}
-    //             <p className="text-xl font-semibold text-white">
-    //               {aboutMe.details.telefone}
-    //             </p>
-    //           </li>
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Telefone:</strong>{" "}
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.telefone}
+                </p>
+              </li>
 
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Experiência:</strong>{" "}
-    //             <p className="text-xl font-semibold text-white">
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Experiência:</strong>{" "}
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.experiencia}
+                </p>
+              </li>
 
-    //             {aboutMe.details.experiencia}
-    //             </p>
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Discord:</strong>{" "}
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.discord}
+                </p>
+              </li>
+            </ul>
 
-    //           </li>
+            <ul className="list-none">
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">
+                  Nacionalidade:
+                </strong>
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.nacionalidade}
+                </p>
+              </li>
 
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Discord:</strong>{" "}
-    //              <p className="text-xl font-semibold text-white">
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Email:</strong>
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.email}
+                </p>
+              </li>
 
-    //             {aboutMe.details.discord}
-    //              </p>
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Freelance:</strong>
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.freelance}
+                </p>
+              </li>
 
-    //           </li>
-    //         </ul>
+              <li className="flex flex-row items-center justify-start gap-2 mb-4">
+                <strong className="text-lg text-gray-400">Idiomas:</strong>
+                <p className="text-xl font-semibold text-white">
+                  {aboutMe.details.idiomas}
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ),
+    },
 
-    //         <ul className="list-none">
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Nacionalidade:</strong>
-    //              <p className="text-xl font-semibold text-white">
+    {
+      title: <div className="p-2 rounded-lg text-[#fca61e]">Experiências</div>,
+      content: (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {experiences.map((exp, index) => (
+            <div key={index} className="mb-4">
+              <div className="p-4 border border-[#fca61e] rounded-lg">
+                <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
+                <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
+                <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
+                <p className="text-lg">{exp.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      ),
+    },
 
-    //             {aboutMe.details.nacionalidade}
-    //              </p>
-    //           </li>
-
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Email:</strong>
-    //              <p className="text-xl font-semibold text-white">
-
-    //              {aboutMe.details.email}
-    //              </p>
-    //           </li>
-
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Freelance:</strong>
-    //              <p className="text-xl font-semibold text-white">
-
-    //              {aboutMe.details.freelance}
-    //              </p>
-    //           </li>
-
-    //           <li className="flex flex-row items-center justify-start gap-2 mb-4">
-    //             <strong className="text-lg text-gray-400">Idiomas:</strong>
-    //              <p className="text-xl font-semibold text-white">
-
-    //              {aboutMe.details.idiomas}
-    //              </p>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   ),
-    // },
-    // {
-    //   title: <div className="p-2 rounded-lg text-[#fca61e]">Experiências</div>,
-    //   content: experiences.map((exp, index) => (
-    //     <div key={index} className="mb-4 grid grid-cols-1">
-    //       <div className="bg-gray-600 p-2 rounded-lg">
-    //         <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-    //         <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
-    //         <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
-    //         <p className="text-lg">{exp.description}</p>
-    //       </div>
-    //     </div>
-    //   )),
-    // },
-    // {
-    //   title: <div className="p-2 rounded-lg text-[#fca61e]">Experiências</div>,
-    //   content: (
-    //     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    //       {experiences.map((exp, index) => (
-    //         <div key={index} className="mb-4">
-    //           <div className="bg-gray-600 p-4 rounded-lg">
-    //             <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-    //             <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
-    //             <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
-    //             <p className="text-lg">{exp.description}</p>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   ),
-    // },
-
-    // {
-    //   title: <div className="p-2 rounded-lg text-[#fca61e]">Educação</div>,
-    //   content: (
-    //     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    //       {education.map((edu, index) => (
-    //         <div
-    //           key={index}
-    //           className="mb-4 p-4 border border-gray-200 rounded-lg"
-    //         >
-    //           <h3 className="text-2xl font-bold mb-1">{edu.title}</h3>
-    //           <h4 className="text-xl text-gray-400 mb-1">{edu.institution}</h4>
-    //           <p className="text-sm text-gray-500 mb-2">{edu.period}</p>
-    //           <p className="text-lg">{edu.description}</p>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   ),
-    //   // content: education.map((edu, index) => (
-    //   //   <div key={index} className="mb-4">
-    //   //     <h3 className="text-2xl font-bold mb-1">{edu.title}</h3>
-    //   //     <h4 className="text-xl text-gray-400 mb-1">{edu.institution}</h4>
-    //   //     <p className="text-sm text-gray-500 mb-2">{edu.period}</p>
-    //   //     <p className="text-lg">{edu.description}</p>
-    //   //   </div>
-    //   // )),
-    // },
+    {
+      title: <div className="p-2 rounded-lg text-[#fca61e]">Educação</div>,
+      content: (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {education.map((edu, index) => (
+            <div
+              key={index}
+              className="mb-4 p-4 border border-[#fca61e] rounded-lg"
+            >
+              <h3 className="text-2xl font-bold mb-1">{edu.title}</h3>
+              <h4 className="text-xl text-gray-400 mb-1">{edu.institution}</h4>
+              <p className="text-sm text-gray-500 mb-2">{edu.period}</p>
+              <p className="text-lg">{edu.description}</p>
+            </div>
+          ))}
+        </div>
+      ),
+    },
     {
       title: "Minhas Habilidades",
       content: (
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-4   responsive-skills">
           {skills.map((skill, index) => (
             <li
               key={index}
-              className="text-lg mb-1 relative group text-[#fca61e]"
+              className="text-lg mb-1 relative group text-[#fca61e] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
               title={skill.name}
             >
-              <div className="text-4xl  bg-red-700">
-                <div className="text-5xl p-5 bg-gray-700">
+              <div className="text-4xl">
+                <div className="text-6xl p-5 bg-gray-700">
                 {skill.icon}
                 </div>
               </div>
@@ -300,7 +282,7 @@ const PersonalPage = () => {
             //     ease: "easeIn",
             //   },
             // }}
-            className="w-full md:w-2/3 flex flex-col justify-center items-start mt-4 p-4 bg-red-600"
+            className="w-full md:w-2/3 flex flex-col justify-center items-start mt-4 p-4 "
           >
             <h3 className="text-2xl font-bold mb-1">{title}</h3>
             {content}
