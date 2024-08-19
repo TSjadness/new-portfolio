@@ -2,7 +2,10 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaWhatsapp, FaMapMarkerAlt  } from "react-icons/fa";
+import { BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+
 import "animate.css/animate.min.css";
 
 const ContactPage = () => {
@@ -28,20 +31,20 @@ const ContactPage = () => {
     emailjs
       .send(serviceId, templateId, templateParams as any, publicKey)
       .then((response) => {
-        console.log("Email sent successfully!", response);
+        // console.log("Email sent successfully!", response);
         alert("Email enviado com sucesso!");
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
-        console.error("Error sending email:", error);
+        // console.error("Error sending email:", error);
       });
   };
 
 
   return (
-    <div>
+    <div className="container mb-24 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#131318] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10">
       <div className="p-2">
         <section
           className="container mb-10 mt-20 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp "
@@ -50,13 +53,14 @@ const ContactPage = () => {
           <div className="flex flex-row gap-10 responsive-about ">
             <div className="w-full flex flex-col responsive-about-text">
               <div className="responsive-contact">
-                  <h1 className="text-5xl md:text-6xl font-bold">
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
                   Entre em Contato
-                    </h1>
-                  <p className="mb-4 text-lg max-w-md font-semibold leading-6 text-start">
-                  Gostaria de fechar um trabalhar ou tem alguma dúvida? Envie uma
-                  mensagem ou entre em contato através das redes sociais abaixo.
-                 </p>
+                </h1>
+                <p className="mb-4 text-lg max-w-md font-semibold leading-6 text-start">
+                  Gostaria de fechar um trabalhar ou tem alguma dúvida? Envie
+                  uma mensagem ou entre em contato através das redes sociais
+                  abaixo.
+                </p>
               </div>
 
               <form
@@ -143,13 +147,46 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-contact-image animate__animated animate__fadeIn">
-              <div className="order-1 xl:order-none mb-8 xl:mb-0">
-                <img
-                  src="your-image-url.jpg"
-                  alt="Contact"
-                  className="rounded-full"
-                />
+            <div className=" w-full flex flex-col justify-start items-start p-5 responsive-contact-image animate__animated animate__fadeIn responsive-contact-item ">
+            
+              <div className="flex items-center mb-8 gap-5 responsive-about-Text exclusive">
+                <BsTelephoneFill className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
+
+                <div className="flex flex-col">
+                  <span className="text-lg text-white/60 font-semibold">
+                    Telefone e WhatsApp
+                  </span>
+                  <span className="text-2xl sm:text-xl text-white font-semibold">
+                    (+55) 19 99826-0330
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center mb-8 gap-5 responsive-about-Text">
+                <MdEmail className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
+
+                <div className="flex flex-col">
+                  <span className="text-lg text-white/60 font-semibold">
+                    Email
+                  </span>
+                  <span className="text-2xl sm:text-xl text-white font-semibold">
+                    jadsonts2012@gmail.com
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center mb-8 gap-5 responsive-about-Text ">
+                <FaMapMarkerAlt className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
+
+                <div className="flex flex-col">
+                  <span className="text-lg text-white/60 font-semibold">
+                    Endereço
+                  </span>
+                  <span className="text-2xl sm:text-xl text-white font-semibold">
+                    Rua Paulo Pereira da Silva, 33, 49503-220, Itabaiana,
+                    Sergipe
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -160,76 +197,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-// 'use client'; deve permanecer no topo do arquivo
-// "use client";
-// import React, { useState } from "react";
-// import emailjs from "@emailjs/browser";
-
-// interface TemplateParams {
-//   from_name: string;
-//   from_email: string;
-//   to_name: string;
-//   message: string;
-// }
-
-// const ContactPage = () => {
-//   const [name, setName] = useState<string>("");
-//   const [email, setEmail] = useState<string>("");
-//   const [message, setMessage] = useState<string>("");
-
-//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-
-//     const serviceId = "service_ja3fwu8";
-//     const templateId = "template_oeja6ur";
-//     const publicKey = "gduhDXS1xDFUQuU_j";
-//     const templateParams: Record<string, unknown> = {
-//       from_name: name,
-//       from_email: email,
-//       to_name: "Jadson Tavares",
-//       message: message,
-//     };
-    
-//     emailjs
-//       .send(serviceId, templateId, templateParams as any, publicKey)
-//       .then((response) => {
-//         console.log("Email sent successfully!", response);
-//         alert("Email enviado com sucesso!");
-//         setName("");
-//         setEmail("");
-//         setMessage("");
-//       })
-//       .catch((error) => {
-//         console.error("Error sending email:", error);
-//       });
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit} className="emailForm">
-//       <input
-//         type="text"
-//         placeholder="Your Name"
-//         value={name}
-//         onChange={(e) => setName(e.target.value)}
-//         required
-//       />
-//       <input
-//         type="email"
-//         placeholder="Your Email"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//         required
-//       />
-//       <textarea
-//         cols={30}
-//         rows={10}
-//         value={message}
-//         onChange={(e) => setMessage(e.target.value)}
-//         required
-//       ></textarea>
-//       <button type="submit">Send Email</button>
-//     </form>
-//   );
-// };
-
-// export default ContactPage;

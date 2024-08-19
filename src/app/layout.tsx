@@ -12,8 +12,6 @@ import Jobspage from "@/components/works/page";
 import PersonalPage from "@/components/personal-me/page";
 import ContactPage from "./contact";
 
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} >
+      <body className={inter.className}>
         <Providers>
           {children}
           <AboutPage />

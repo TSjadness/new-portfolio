@@ -204,6 +204,7 @@ html {
   }
 
   .responsive-contact {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,6 +214,14 @@ html {
 
     p {
       text-align: justify;
+    }
+  }
+
+  .responsive-contact-item {
+    width: auto;
+
+    .exclusive{
+       width: 100%;
     }
   }
 }
