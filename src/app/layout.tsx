@@ -10,6 +10,9 @@ import TecnologyPage from "@/components/tecnology/page";
 import Statistics from "@/components/Statistic/page";
 import Jobspage from "@/components/works/page";
 import PersonalPage from "@/components/personal-me/page";
+import ContactPage from "./contact";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +36,7 @@ export default function RootLayout({
           <PersonalPage />
           <ProjectList />
           <Jobspage />
+          <ContactPage />
           <TecnologyPage />
           <ToastContainer />
         </Providers>

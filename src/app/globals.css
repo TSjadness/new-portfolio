@@ -166,7 +166,7 @@ html {
     padding: 1rem;
   }
 
-  .responsive-aboutMe{
+  .responsive-aboutMe {
     font-size: 1.2rem;
   }
   .responsive-ul {
@@ -198,11 +198,22 @@ html {
     gap: 1rem;
     justify-content: center;
 
-
     /* flex-direction: row; */
-      align-items: center;
-      justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .responsive-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+
+    p {
+      text-align: justify;
+    }
   }
 }
 
