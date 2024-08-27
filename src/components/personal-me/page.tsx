@@ -436,7 +436,7 @@ const PersonalPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {experiences.map((exp, index) => (
             <div key={index} className="mb-4">
-              <div className="p-4 border border-[#fca61e] rounded-lg">
+              <div className="p-4 border border-[#fca61e] rounded-lg h-80">
                 <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
                 <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
                 <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
@@ -501,7 +501,7 @@ const PersonalPage = () => {
   return (
     <section
       className="container mb-24 p-5 w-full min-h-[38rem] h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#131318] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
-      id="about-me"
+      id="sobre-mim"
     >
       <h2 className="text-3xl font-bold tracking-tight mt-5">
         <span className="text-[#fca61e]">Sobre</span> Mim
@@ -580,7 +580,7 @@ const PersonalPage = () => {
                   },
                 },
               }}
-              className="w-full md:w-2/3 flex flex-col justify-center items-start p-4 "
+              className="w-full md:w-3/3 flex flex-col justify-center items-start p-4 "
             >
               {content}
             </motion.div>

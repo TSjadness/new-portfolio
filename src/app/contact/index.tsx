@@ -176,7 +176,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-center mb-8 gap-5 responsive-about-Text ">
-                <FaMapMarkerAlt className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
+                <FaMapMarkerAlt className="w-24 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
 
                 <div className="flex flex-col">
                   <span className="text-lg text-white/60 font-semibold">
