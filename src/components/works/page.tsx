@@ -536,14 +536,17 @@ const Jobspage = () => {
 
   return (
     <section
-      className="container mx-auto p-6 max-w-6xl text-white bg-gradient-to-r from-[#2c2c34] to-[#1e1e28] rounded-lg shadow-lg"
+      className="container mx-auto p-6 max-w-6xl text-white bg-gradient-to-r from-[#2c2c34] to-[#1e1e28] rounded-lg shadow-lg "
       id="trabalhos"
     >
       <h2 className="text-4xl font-bold text-center mb-6">
         <span className="text-[#fca61e]">Minhas</span> Experiências
       </h2>
 
-      <div className="flex flex-col items-center space-y-6 md:space-y-0 md:flex-row md:space-x-6">
+      <div
+        className=" 
+      flex flex-col items-center space-y-6 md:space-y-0  md:space-x-6 "
+      >
         {/* <button
           onClick={handlePrevious}
           className="text-[#17171d] bg-[#fca61e] p-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50"
@@ -557,14 +560,13 @@ const Jobspage = () => {
           <motion.div
             key={currentJobIndex}
             custom={direction}
-             initial={{ x: direction > 40 ? 80 : -20, opacity: 0 }}
+            initial={{ x: direction > 40 ? 80 : -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-          // exit={{ x: direction > 40 ? 80 : -20, opacity: 0 }}
+            // exit={{ x: direction > 40 ? 80 : -20, opacity: 0 }}
             transition={{ duration: 0.8 }}
-
-            className="bg-[#1c1c22] p-6 rounded-lg shadow-lg flex flex-col items-center"
+            className="bg-[#1e1e28] h-[28rem] p-6 rounded-lg shadow-lg flex flex-col items-center"
           >
-            <div className="flex flex-row items-center space-y-6 md:space-y-0 md:flex-row md:space-x-6">
+            <div className="flex flex-row items-center space-y-6 md:space-y-0 md:flex-row md:space-x-6 ">
               <div className="w-full mb-4 p-5 bg-red-900">
                 <Image
                   src={image}
@@ -600,7 +602,7 @@ const Jobspage = () => {
         </button> */}
       </div>
 
-      <div className="bg-red-100 w-full flex justify-center items-center gap-8">
+      {/* <div className="bg-red-100 w-full flex justify-center items-center gap-8">
         <button
           onClick={handlePrevious}
           className="text-[#17171d] bg-[#fca61e] p-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50"
@@ -616,7 +618,7 @@ const Jobspage = () => {
         >
           <IoIosArrowForward className="text-3xl" />
         </button>
-      </div>
+      </div> */}
 
       <div className="flex justify-center mt-6 space-x-2">
         {jobs.map((_, index) => (
