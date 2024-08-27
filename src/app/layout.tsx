@@ -29,14 +29,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           {children}
-          <AboutPage />
+          {/* <AboutPage />
           <Statistics />
           <PersonalPage />
-          <ProjectList />
+          <ProjectList /> */}
           <Jobspage />
-          <ContactPage />
-          <TecnologyPage />
-          <ToastContainer />
+          {/* <ContactPage /> */}
+          {/* <TecnologyPage />
+          <ToastContainer /> */}
         </Providers>
       </body>
     </html>
