@@ -149,4 +149,3 @@ const Jobspage = () => {
 };
 
 export default Jobspage;
-

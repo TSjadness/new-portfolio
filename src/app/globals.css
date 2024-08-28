@@ -132,6 +132,11 @@ html {
     flex-direction: column-reverse;
   }
 
+  .responsive-work{
+    background-color: red; 
+    display:flex;
+    flex-direction: column;
+  }
   .stock-ticker {
     overflow: hidden;
     user-select: none;
