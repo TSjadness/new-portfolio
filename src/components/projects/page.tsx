@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const ProjectList = () => {
-//   return (
-//     <div>ProjectList</div>
-//   )
-// }
-
-// export default ProjectList
-
-
 import React from 'react';
 
 const Card = ({
@@ -39,7 +28,7 @@ const Card = ({
 
 const ProjectList = () => (
   <section
-    className="container mb-24 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#131318] responsive-projects "
+    className="container mb-24 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white bg-[#1e1e28] responsive-projects "
     id="projetos"
   >
     <h2 className="text-3xl font-bold tracking-tight mt-5">

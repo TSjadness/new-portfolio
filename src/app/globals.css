@@ -191,7 +191,6 @@ html {
   }
 
   .responsive-skills {
-    background-color: yellow;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -224,6 +223,42 @@ html {
        width: 100%;
     }
   }
+  .responsive-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+
+    .responsive-work-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+  }
+
+  .responsive-work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .responsive-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  
 }
 
 .stock-ticker {

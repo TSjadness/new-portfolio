@@ -44,7 +44,7 @@ const ContactPage = () => {
 
 
   return (
-    <div className="container mb-24 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#131318] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10">
+    <div className="container mb-24 mt-20 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#1e1e28] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10">
       <div className="p-2">
         <section
           className="container mb-10 mt-20 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp "
@@ -72,7 +72,7 @@ const ContactPage = () => {
                   value={name}
                   placeholder="Seu nome"
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#17171d] text-white border border-[#fca61e] focus:outline-none"
+                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
                   required
                 />
                 <input
@@ -80,14 +80,14 @@ const ContactPage = () => {
                   value={email}
                   placeholder="Seu email"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#17171d] text-white border border-[#fca61e] focus:outline-none"
+                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
                   required
                 />
                 <textarea
                   value={message}
                   placeholder="Sua mensagem"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#17171d] text-white border border-[#fca61e] focus:outline-none"
+                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
                   rows={5}
                   required
                 ></textarea>
@@ -148,7 +148,6 @@ const ContactPage = () => {
             </div>
 
             <div className=" w-full flex flex-col justify-start items-start p-5 responsive-contact-image animate__animated animate__fadeIn responsive-contact-item ">
-            
               <div className="flex items-center mb-8 gap-5 responsive-about-Text exclusive">
                 <BsTelephoneFill className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
 
