@@ -156,7 +156,7 @@ const ContactPage = () => {
                     Telefone e WhatsApp
                   </span>
                   <span className="text-2xl sm:text-xl text-white font-semibold">
-                    (+55) 19 99826-0330
+                    (+55) 79 99905-9254
                   </span>
                 </div>
               </div>
