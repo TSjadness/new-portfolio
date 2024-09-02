@@ -20,11 +20,13 @@ export const metadata: Metadata = {
   description: "Portfólio de Jadson Santos, desenvolvedor front-end jr.",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -32,13 +34,16 @@ export default function RootLayout({
           {children}
           <AboutPage />
           <Statistics />
+
+          {/* 
+        
           <PersonalPage />
           <ProjectList />
           <Jobspage />
           <ContactPage />
           <TecnologyPage />
           <Footer />
-          <ToastContainer />
+          <ToastContainer /> */}
         </Providers>
       </body>
     </html>

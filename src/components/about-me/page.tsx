@@ -1,9 +1,11 @@
-import React from "react";
+import React, { createContext } from "react";
+
 import { GoDownload } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "animate.css/animate.min.css";
-
+import RotatingImage from "../profile/page";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
@@ -13,7 +15,7 @@ const AboutPage = () => {
           className="container mb-10 mt-20 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp"
           id="home"
         >
-          <div className="flex flex-row gap-10 responsive-about">
+          <div className="flex flex-row  responsive-about ">
             <div className="w-full flex flex-col responsive-about-Text">
               <p className="text-xl font-normal mb-2 f">Front-end Developer</p>
               <h1 className="text-5xl md:text-6xl font-bold">Olá eu sou</h1>
@@ -96,8 +98,8 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#fca61e] w-full flex justify-center items-center responsive-about-Image animate__animated animate__fadeIn">
-              <div className="order-1 xl:order-none mb-8 xl:mb-0"> foto</div>
+            <div className=" w-full flex justify-center items-center responsive-about-Image animate__animated animate__fadeIn mb-4">
+              <RotatingImage />
             </div>
           </div>
         </section>
