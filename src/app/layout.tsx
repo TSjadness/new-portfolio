@@ -34,16 +34,13 @@ export default function RootLayout({
           {children}
           <AboutPage />
           <Statistics />
-
-          {/* 
-        
           <PersonalPage />
           <ProjectList />
           <Jobspage />
           <ContactPage />
           <TecnologyPage />
           <Footer />
-          <ToastContainer /> */}
+          <ToastContainer />
         </Providers>
       </body>
     </html>
