@@ -13,6 +13,7 @@ import PersonalPage from "@/components/personal-me/page";
 import ContactPage from "./contact";
 import Footer from "@/components/footer/page";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -32,15 +33,20 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           {children}
-          <AboutPage />
-          <Statistics />
-          <PersonalPage />
+          {/* <AboutPage /> */}
+          {/* <Statistics /> */}
+          {/* <PersonalPage /> */}
           <ProjectList />
           <Jobspage />
-          <ContactPage />
-          <TecnologyPage />
+          {/* <ContactPage /> */}
+          {/* <TecnologyPage /> */}
+
           <Footer />
-          <ToastContainer />
+          {/* 
+          
+
+         
+          <ToastContainer /> */}
         </Providers>
       </body>
     </html>

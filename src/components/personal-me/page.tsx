@@ -33,38 +33,95 @@ const PersonalPage = () => {
       idiomas: "Português, Inglês",
     },
   };
-
+  
+  //   {
+  //     title: "Desenvolvedor Frontend",
+  //     company: "Empresa 1",
+  //     period: "Jan 2020 - Dez 2021",
+  //     description:
+  //       "Trabalhei na criação e manutenção de interfaces responsivas usando React e Tailwind CSS. Colaborei com equipes de design para implementar soluções amigáveis e inovadoras.",
+  //     image: foto1,
+  //   },
+  //   {
+  //     title: "Desenvolvedor Full Stack",
+  //     company: "Empresa 2",
+  //     period: "Jan 2022 - Presente",
+  //     description:
+  //       "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+  //     image: foto1,
+  //   },
+  //   {
+  //     title: "Desenvolvedor Full Stack",
+  //     company: "Empresa 2",
+  //     period: "Jan 2022 - Presente",
+  //     description:
+  //       "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+  //     image: foto1,
+  //   },
+  //   {
+  //     title: "Desenvolvedor Full Stack",
+  //     company: "Empresa 2",
+  //     period: "Jan 2022 - Presente",
+  //     description:
+  //       "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+  //     image: foto1,
+  //   },
+  // ];
   const experiences = [
     {
+      title: "Desenvolvedor Frontend JR",
+      company: "Comeia Labs",
+      period: "2022 - 2024",
+      description:
+        "Iniciei minha carreira como desenvolvedor por meio de um curso de desenvolvimento de software Fullstack na Comeia Labs. Participei ativamente da equipe de desenvolvimento focada em projetos de alta performance e contribui em reuniões com clientes para definição de requisitos e manutenção de sites e aplicativos.",
+      image: foto1,
+    },
+    {
       title: "Desenvolvedor Frontend",
-      company: "Empresa 1",
-      period: "Jan 2020 - Dez 2021",
+      company: "Luck Viagens - Comeia Labs",
+      period: "Outubro 2022 - Janeiro 2023",
       description:
-        "Trabalhei na criação e manutenção de interfaces responsivas usando React e Tailwind CSS. Colaborei com equipes de design para implementar soluções amigáveis e inovadoras.",
+        "Desenvolvimento de uma aplicação web para pacotes de viagens. Tecnologias: ReactTS, TypeScript, Axios, React Router, Tailwind CSS. Implementação de autenticação de usuários e rotas privadas.",
       image: foto1,
     },
     {
-      title: "Desenvolvedor Full Stack",
-      company: "Empresa 2",
-      period: "Jan 2022 - Presente",
+      title: "Desenvolvedor Frontend",
+      company: "Otur Viagens - Comeia Labs",
+      period: "Janeiro 2023 - Fevereiro 2024",
       description:
-        "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+        "Desenvolvimento e manutenção de uma aplicação web para pacotes de viagens nacionais e internacionais. Tecnologias: ReactTS, TypeScript, Axios, React Router, Tailwind CSS, FontAwesome. Criação de interfaces para usuários e administradores com autenticação.",
       image: foto1,
     },
     {
-      title: "Desenvolvedor Full Stack",
-      company: "Empresa 2",
-      period: "Jan 2022 - Presente",
+      title: "Desenvolvedor Frontend",
+      company: "Alpha Web - Comeia Labs",
+      period: "Março 2024 - Abril 2024",
       description:
-        "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+        "Finalização de projeto em uma aplicação de gestão para fábricas de confecção. Implementação de funcionalidades como listagem de produtos, cadastro de clientes e controle de estoque. Melhorias na responsividade e interações com APIs.",
       image: foto1,
     },
     {
-      title: "Desenvolvedor Full Stack",
-      company: "Empresa 2",
-      period: "Jan 2022 - Presente",
+      title: "Desenvolvedor Frontend",
+      company: "D-GYM - Comeia Labs",
+      period: "Abril 2024",
       description:
-        "Atuo no desenvolvimento de aplicações completas usando Next.js e Node.js, focando em performance e segurança. Implementação de APIs RESTful e integração com bancos de dados.",
+        "Desenvolvimento de um sistema de academia online focado no público feminino. Tecnologias: ReactJS, TypeScript, FullCalendar. Funcionalidades incluem cadastro de aulas, agendamento e desenvolvimento de design responsivo com Tailwind CSS.",
+      image: foto1,
+    },
+    {
+      title: "Desenvolvedor Front-end Freelance",
+      company: "Masterix Web",
+      period: "Maio 2024 - Presente",
+      description:
+        "Desenvolvimento e finalização completa de site totalmente responsivo, utilizando tecnologias como ReactTS, TypeScript, Tailwind CSS, MaterialUI e NextJS.",
+      image: foto1,
+    },
+    {
+      title: "Desenvolvedor Frontend Freelance",
+      company: "Portal Abri MEI",
+      period: "Junho 2024 - Presente",
+      description:
+        "Desenvolvimento e finalização de uma landing page de portal e tela de cadastro para MEIs, utilizando tecnologias como TypeScript, HTML/CSS, Tailwind CSS e NextJS.",
       image: foto1,
     },
   ];
@@ -78,11 +135,12 @@ const PersonalPage = () => {
         "Curso voltado para a integração entre tecnologia da informação e gestão, com ênfase em análise de sistemas, desenvolvimento de software, banco de dados e segurança da informação. Durante a graduação, adquiri habilidades em programação, design de arquitetura de sistemas e análise de requisitos, visando preparar profissionais para atuar na solução de problemas organizacionais através da tecnologia.",
     },
     {
-      title: "Curso Fullstack",
-      institution: "Bootcamp Y",
-      period: "2021",
-      description:
-        "Programa intensivo de 6 meses cobrindo desenvolvimento frontend e backend com projetos práticos.",
+
+    title: "Curso Fullstack em Desenvolvimento de Software",  
+    institution: "Projeto Academy do Comeia Labs",  
+    period: "2021",  
+    description: "Participação em um programa intensivo e remoto de 6 meses dedicado ao desenvolvimento fullstack. Durante o curso, adquiri competências práticas em tecnologias essenciais, incluindo Git, HTML, CSS, JavaScript e TypeScript. Além disso, aprofundei meus conhecimentos em bancos de dados, Node.js, engenharia de software e metodologias ágeis, desenvolvendo projetos que reforçaram as habilidades adquiridas."  
+  
     },
   ];
 
