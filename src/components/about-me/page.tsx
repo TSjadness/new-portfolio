@@ -39,8 +39,10 @@ const AboutPage = () => {
 
               <div className="flex flex-row gap-5 justify-start items-center responsive-about-list">
                 <a
-                  href="src/curriculo/curriculo.pdf"
+                  href="/curriculo/Jadson_Cv.pdf"
+                  download="Jadson_Cv.pdf"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#fca61e] py-4 px-8 font-semibold flex justify-center items-center rounded-full border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out"
                 >
                   <div className="flex flex-row gap-2 justify-center items-center">
