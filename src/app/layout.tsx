@@ -13,7 +13,6 @@ import PersonalPage from "@/components/personal-me/page";
 import ContactPage from "./contact";
 import Footer from "@/components/footer/page";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,32 +20,25 @@ export const metadata: Metadata = {
   description: "Portfólio de Jadson Santos, desenvolvedor front-end jr.",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <Providers>
           {children}
-          {/* <AboutPage /> */}
-          {/* <Statistics /> */}
-          {/* <PersonalPage /> */}
+          <AboutPage />
+          <Statistics />
+          <PersonalPage />
           <ProjectList />
           <Jobspage />
-          {/* <ContactPage /> */}
-          {/* <TecnologyPage /> */}
-
+          <ContactPage />
+          <TecnologyPage />
           <Footer />
-          {/* 
-          
-
-         
-          <ToastContainer /> */}
+          <ToastContainer />
         </Providers>
       </body>
     </html>

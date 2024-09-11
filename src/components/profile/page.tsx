@@ -4,7 +4,7 @@ import profile from "@/images/foto-perfil2.png";
 const RotatingImage = () => {
   return (
     <div className="relative  flex items-center justify-center ">
-      <div className="absolute w-[25rem] h-[25rem] border-4  border-[#fca61e] border-dashed rounded-full animate-spin-slow"></div>
+      <div className="absolute w-[25rem] h-[25rem] border-4  border-[#fca61e] border-dashed rounded-full animate-spin-slow circle-imagem" ></div>
       <div className="">
         <Image
           src={profile}

@@ -5,15 +5,19 @@ import {
   FaReact,
   FaNodeJs,
   FaHtml5,
+  FaFigma,
+  FaWordpress,
   FaCss3Alt,
   FaJsSquare,
 } from "react-icons/fa";
+import { BsFiletypeSql } from "react-icons/bs";
 import {
   SiTypescript,
   SiTailwindcss,
   SiPresto,
   SiStyledcomponents,
 } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 import foto1 from "@/images/foto-teste.jpg";
 
 const PersonalPage = () => {
@@ -33,7 +37,7 @@ const PersonalPage = () => {
       idiomas: "Português, Inglês",
     },
   };
-  
+
   //   {
   //     title: "Desenvolvedor Frontend",
   //     company: "Empresa 1",
@@ -111,7 +115,7 @@ const PersonalPage = () => {
     {
       title: "Desenvolvedor Front-end Freelance",
       company: "Masterix Web",
-      period: "Maio 2024 - Presente",
+      period: "Maio 2024 - Maio 2024",
       description:
         "Desenvolvimento e finalização completa de site totalmente responsivo, utilizando tecnologias como ReactTS, TypeScript, Tailwind CSS, MaterialUI e NextJS.",
       image: foto1,
@@ -119,7 +123,7 @@ const PersonalPage = () => {
     {
       title: "Desenvolvedor Frontend Freelance",
       company: "Portal Abri MEI",
-      period: "Junho 2024 - Presente",
+      period: "Junho 2024 - Junho 2024",
       description:
         "Desenvolvimento e finalização de uma landing page de portal e tela de cadastro para MEIs, utilizando tecnologias como TypeScript, HTML/CSS, Tailwind CSS e NextJS.",
       image: foto1,
@@ -135,12 +139,11 @@ const PersonalPage = () => {
         "Curso voltado para a integração entre tecnologia da informação e gestão, com ênfase em análise de sistemas, desenvolvimento de software, banco de dados e segurança da informação. Durante a graduação, adquiri habilidades em programação, design de arquitetura de sistemas e análise de requisitos, visando preparar profissionais para atuar na solução de problemas organizacionais através da tecnologia.",
     },
     {
-
-    title: "Curso Fullstack em Desenvolvimento de Software",  
-    institution: "Projeto Academy do Comeia Labs",  
-    period: "2021",  
-    description: "Participação em um programa intensivo e remoto de 6 meses dedicado ao desenvolvimento fullstack. Durante o curso, adquiri competências práticas em tecnologias essenciais, incluindo Git, HTML, CSS, JavaScript e TypeScript. Além disso, aprofundei meus conhecimentos em bancos de dados, Node.js, engenharia de software e metodologias ágeis, desenvolvendo projetos que reforçaram as habilidades adquiridas."  
-  
+      title: "Curso Fullstack em Desenvolvimento de Software",
+      institution: "Projeto Academy do Comeia Labs",
+      period: "2021",
+      description:
+        "Participação em um programa intensivo e remoto de 6 meses dedicado ao desenvolvimento fullstack. Durante o curso, adquiri competências práticas em tecnologias essenciais, incluindo Git, HTML, CSS, JavaScript e TypeScript. Além disso, aprofundei meus conhecimentos em bancos de dados, Node.js, engenharia de software e metodologias ágeis, desenvolvendo projetos que reforçaram as habilidades adquiridas.",
     },
   ];
 
@@ -148,12 +151,16 @@ const PersonalPage = () => {
     { name: "JavaScript", icon: <FaJsSquare /> },
     { name: "TypeScript", icon: <SiTypescript /> },
     { name: "React", icon: <FaReact /> },
+    { name: "Wordpress", icon: <FaWordpress /> },
+    { name: "Figma", icon: <FaFigma /> },
     { name: "Node.js", icon: <FaNodeJs /> },
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "API REST", icon: <SiPresto /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     { name: "Styled components", icon: <SiStyledcomponents /> },
+    { name: "NextJS", icon: <RiNextjsFill /> },
+    { name: "SQL", icon: <BsFiletypeSql /> },
   ];
 
   const sections = [
@@ -234,7 +241,7 @@ const PersonalPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {experiences.map((exp, index) => (
             <div key={index} className="mb-4">
-              <div className="p-4 border border-[#fca61e] rounded-lg h-80">
+              <div className="p-4 border border-[#fca61e] rounded-lg min-h-80 h-full">
                 <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
                 <h4 className="text-xl text-gray-400 mb-1">{exp.company}</h4>
                 <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
@@ -298,7 +305,7 @@ const PersonalPage = () => {
 
   return (
     <section
-      className="container mb-24 p-5 w-full min-h-[38rem] h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#1e1e28] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10"
+      className="container mb-24 p-5 w-full min-h-[38rem] h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#1e1e28] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 responsive-section"
       id="sobre-mim"
     >
       <h2 className="text-3xl font-bold tracking-tight mt-5">
@@ -307,7 +314,7 @@ const PersonalPage = () => {
       <p className="text-gray-400">
         Um pouco sobre minha trajetória profissional e habilidades.
       </p>
-      <div className="flex flex-col gap-5 mt-4 md:flex-row">
+      <div className="flex flex-col gap-5 mt-4 md:flex-row ">
         {sections.map((section, index) => (
           <button
             key={index}
@@ -324,7 +331,7 @@ const PersonalPage = () => {
       </div>
 
       <div className="space-y-4 p-2 flex flex-col md:flex-row justify-start items-center">
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full ">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={currentSectionIndex}
@@ -375,7 +382,7 @@ const PersonalPage = () => {
                   },
                 },
               }}
-              className="w-full md:w-3/3 flex flex-col justify-center items-start p-4 "
+              className="w-full h-max md:w-3/3 flex flex-col justify-center items-start p-4 "
             >
               {content}
             </motion.div>

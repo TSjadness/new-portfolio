@@ -2,7 +2,7 @@
 import { Route } from "next";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import foto from "@/images/not-found.jpg";
+import foto from "@/images/404.jpg";
 
 const NotFound = () => {
   const router = useRouter();
@@ -25,7 +25,7 @@ const NotFound = () => {
       <div className="pt-8">
         <a href="/" className="hover:underline">
           <button
-            className="border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out text-white px-8 py-2"
+            className="border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out text-white px-8 py-2 rounded-xl"
             type="submit"
             onClick={() => handleHome()}
           >

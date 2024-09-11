@@ -21,10 +21,6 @@
   }
 }
 
-/* color: #fed72f;  */
-/* color: #fca61e;  */
-/* background: #131318; */
-/* background: #17171d; */
 body {
   background: #17171d;
   font-family: "JetBrains Mono", Verdana, Geneva, Tahoma, sans-serif;
@@ -47,7 +43,6 @@ html {
   .responsive-statics {
     display: flex;
     width: auto;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -60,6 +55,15 @@ html {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+  }
+
+  .responsive-about-two {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 2%;
   }
 
   .responsive-about-Text {
@@ -80,6 +84,16 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 22rem;
+  }
+  .responsive-section{
+    padding: 1.5rem;
+  }
+  .circle-imagem {
+    width: 95%;
+    height: 95%;
+    padding: auto;
+    margin: auto;
   }
   .responsive-about-list {
     display: flex;
@@ -89,7 +103,6 @@ html {
   }
 
   .responsive-job {
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -111,11 +124,6 @@ html {
   }
 
   .responsive-button-work {
-    /* background-color: aqua; */
-    /* z-index: 10;
-    position: relative;
-    top: -35rem;
-    display: flex; */
     justify-content: space-between;
 
     button {
@@ -127,13 +135,12 @@ html {
   }
 
   .responsive-box {
-    /* background-color: blue; */
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .responsive-work{
-    display:flex;
+  .responsive-work {
+    display: flex;
     flex-direction: column;
   }
   .stock-ticker {
@@ -200,14 +207,11 @@ html {
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
     justify-content: center;
-
-    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
   }
 
   .responsive-contact {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,8 +227,8 @@ html {
   .responsive-contact-item {
     width: auto;
 
-    .exclusive{
-       width: 100%;
+    .exclusive {
+      width: 100%;
     }
   }
   .responsive-work {
@@ -235,12 +239,12 @@ html {
     text-align: center;
     padding: 1rem;
 
-    .responsive-work-text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    .responsive-work-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
 
@@ -254,7 +258,7 @@ html {
     height: auto;
   }
 
-  .responsive-footer{
+  .responsive-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,7 +266,6 @@ html {
     text-align: center;
     padding: 1rem;
   }
-  
 }
 
 .stock-ticker {
@@ -295,8 +298,6 @@ html {
     transform: translateX(calc(-50% - var(--gap)));
   }
 }
-
-
 
 @keyframes spin-slow {
   0% {

@@ -1,11 +1,11 @@
-import React, { createContext } from "react";
+import React from "react";
 
 import { GoDownload } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "animate.css/animate.min.css";
 import RotatingImage from "../profile/page";
-import { motion } from "framer-motion";
+
 
 const AboutPage = () => {
   return (
@@ -39,7 +39,8 @@ const AboutPage = () => {
 
               <div className="flex flex-row gap-5 justify-start items-center responsive-about-list">
                 <a
-                  href=""
+                  href="src/curriculo/curriculo.pdf"
+                  target="_blank"
                   className="text-[#fca61e] py-4 px-8 font-semibold flex justify-center items-center rounded-full border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out"
                 >
                   <div className="flex flex-row gap-2 justify-center items-center">

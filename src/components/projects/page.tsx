@@ -27,13 +27,12 @@ const Card = ({
         height={600}  
         layout="responsive"
       />
-      {/* <img className="rounded-t-lg" src={imgSrc} alt={imgAlt} /> */}
     </a>
     <div className="p-6">
       <h5 className="mb-2 text-2xl font-medium leading-tight text-white">
         {title}
       </h5>
-      <p className="mb-4 text-base text-white">{description}</p>
+      <p className="mb-4 text-base text-white min-h-28">{description}</p>
     </div>
   </div>
 );
