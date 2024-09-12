@@ -3,6 +3,9 @@ import Image, { StaticImageData } from "next/image";
 import MasterixWeb from "@/image-projects/foto-Masterix.png";
 import AbrirMei from "@/image-projects/foto-AbriMei.png";
 import EmBreve from "@/image-projects/EmBreve.png";
+import ControleFinanca from "@/image-projects/controle-finanças.png";
+
+
 
 const Card = ({
   href,
@@ -49,16 +52,23 @@ const ProjectList = () => (
       <Card
         href="#!"
         imgSrc={MasterixWeb}
-        imgAlt="Hollywood Sign on The Hill"
+        imgAlt="Masterix Web"
         title="Masterix Web"
         description="aplicação web interativa que permita aos usuários gerenciar suas tarefas diárias de forma eficiente."
       />
       <Card
         href="#!"
         imgSrc={AbrirMei}
-        imgAlt="Palm Springs Road"
+        imgAlt="Portal Abrir MEI"
         title="Portal Abrir MEI"
         description="Aplicação web que facilita o processo de abertura de Microempreendedor Individual (MEI) no Brasil."
+      />
+      <Card
+        href="#!"
+        imgSrc={ControleFinanca}
+        imgAlt="Controle de Finanças"
+        title="Controle de Finanças"
+        description="Aplicação web que permite o controle de finanças pessoais de forma simples e intuitiva."
       />
       <Card
         href="#!"
