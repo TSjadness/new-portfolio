@@ -50,20 +50,20 @@ const ProjectList = () => (
       <span className="text-[#fca61e]">Ùltimos</span> Projetos
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 ">
-      <Card
+      {/* <Card
         href="#!"
         imgSrc={MasterixWeb}
         imgAlt="Masterix Web"
         title="Masterix Web"
         description="aplicação web interativa que permita aos usuários gerenciar suas tarefas diárias de forma eficiente."
-      />
-      <Card
+      /> */}
+      {/* <Card
         href="#!"
         imgSrc={AbrirMei}
         imgAlt="Portal Abrir MEI"
         title="Portal Abrir MEI"
         description="Aplicação web que facilita o processo de abertura de Microempreendedor Individual (MEI) no Brasil."
-      />
+      /> */}
       <Card
         href="https://controles-de-despesas.vercel.app/"
         imgSrc={ControleFinanca}
