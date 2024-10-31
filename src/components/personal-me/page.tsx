@@ -112,22 +112,22 @@ const PersonalPage = () => {
         "Desenvolvimento de um sistema de academia online focado no público feminino. Tecnologias: ReactJS, TypeScript, FullCalendar. Funcionalidades incluem cadastro de aulas, agendamento e desenvolvimento de design responsivo com Tailwind CSS.",
       image: foto1,
     },
-    // {
-    //   title: "Desenvolvedor Front-end Freelance",
-    //   company: "Masterix Web",
-    //   period: "Maio 2024 - Maio 2024",
-    //   description:
-    //     "Desenvolvimento e finalização completa de site totalmente responsivo, utilizando tecnologias como ReactTS, TypeScript, Tailwind CSS, MaterialUI e NextJS.",
-    //   image: foto1,
-    // },
-    // {
-    //   title: "Desenvolvedor Frontend Freelance",
-    //   company: "Portal Abri MEI",
-    //   period: "Junho 2024 - Junho 2024",
-    //   description:
-    //     "Desenvolvimento e finalização de uma landing page de portal e tela de cadastro para MEIs, utilizando tecnologias como TypeScript, HTML/CSS, Tailwind CSS e NextJS.",
-    //   image: foto1,
-    // },
+    {
+      title: "Desenvolvedor Front-end Freelance",
+      company: "Masterix Web",
+      period: "Maio 2024 - Maio 2024",
+      description:
+        "Desenvolvimento e finalização completa de site totalmente responsivo, utilizando tecnologias como ReactTS, TypeScript, Tailwind CSS, MaterialUI e NextJS.",
+      image: foto1,
+    },
+    {
+      title: "Desenvolvedor Frontend Freelance",
+      company: "Portal Abri MEI",
+      period: "Junho 2024 - Junho 2024",
+      description:
+        "Desenvolvimento e finalização de uma landing page de portal e tela de cadastro para MEIs, utilizando tecnologias como TypeScript, HTML/CSS, Tailwind CSS e NextJS.",
+      image: foto1,
+    },
   ];
 
   const education = [
