@@ -3,150 +3,246 @@ import React, { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import foto1 from "@/images/foto-teste.jpg";
-import LuckyViagens from "@/image-projects/foto-luckyviagens.jpg";
-import OturViagem from "@/image-projects/foto-oturViagens.png";
-import AlphaWeb from "@/image-projects/foto-alphaWeb.png";
-import DgymWeb from "@/image-projects/foto-dgym.png";
 
+import LuckyViagens from "@/image-projects/new/image_32.png";
+import OturViagem from "@/image-projects/new/image_34.png";
+import AlphaWeb from "@/image-projects/new/image_30.png";
+import DgymWeb from "@/image-projects/new/image_31.png";
+
+const jobs = [
+  {
+    title: "Desenvolvedor Front-end JR",
+    company: "Luck Viagens",
+    period: "Outubro de 2022 - Janeiro de 2023 (4 meses)",
+    location: "Caruaru, Pernambuco, Brasil",
+    description: `
+      Atuei como desenvolvedor front-end Jr. na criação e manutenção da plataforma de pacotes de viagens.
+      Trabalhei com React TS e TypeScript, integrações com APIs externas e foco em segurança (autenticação e autorização),
+      além de boas práticas de código limpo e arquitetura modular.
+    `,
+    image: LuckyViagens,
+  },
+  {
+    title: "Desenvolvedor Front-end JR",
+    company: "Otur Viagens",
+    period: "Janeiro de 2023 - Fevereiro de 2024 (1 ano e 2 meses)",
+    location: "Caruaru, Pernambuco, Brasil",
+    description: `
+      Desenvolvi e mantive a aplicação web de pacotes de viagens utilizando React TS e TypeScript.
+      Criei interfaces para usuários finais e administradores, implementei rotas privadas,
+      autenticação segura e layout totalmente responsivo com Tailwind CSS.
+    `,
+    image: OturViagem,
+  },
+  {
+    title: "Desenvolvedor Front-end JR",
+    company: "Alpha Sistema",
+    period: "Março de 2024 - Abril de 2024 (2 meses)",
+    location: "Caruaru, Pernambuco, Brasil",
+    description: `
+      Fui integrado ao time na fase final do ciclo de desenvolvimento,
+      focando em novas funcionalidades e correção de bugs em módulos de produtos, clientes, estoque,
+      vendas, finanças e relatórios. Otimizei rotas, integrei APIs externas e garanti responsividade com Tailwind CSS.
+    `,
+    image: AlphaWeb,
+  },
+  {
+    title: "Desenvolvedor Front-end JR",
+    company: "D-GYM",
+    period: "Abril de 2024 - Abril de 2024 (1 mês)",
+    location: "São Paulo, Brasil",
+    description: `
+      Participei da criação da plataforma para academias com React e TypeScript,
+      definindo a estrutura do projeto e integrando APIs externas.
+      Desenvolvi interfaces para membros, instrutores e administradores, incluindo agendamento de aulas
+      e visualização em calendário interativo, sempre com foco em usabilidade e responsividade.
+    `,
+    image: DgymWeb,
+  },
+];
+
+const variants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 80 : -80,
+    opacity: 0,
+  }),
+  center: { x: 0, opacity: 1 },
+  exit: (direction: number) => ({
+    x: direction > 0 ? -80 : 80,
+    opacity: 0,
+  }),
+};
 
 const Jobspage = () => {
-  // Experiência profissional
-  const jobs = [
-    {
-      title: "Desenvolvedor Front-end JR",
-      company: "Luck Viagens",
-      period: "outubro de 2022 - janeiro de 2023 (4 meses)",
-      location: "Caruaru, Pernambuco, Brasil",
-      description: `
-        No projeto da Luck Viagens, atuei como desenvolvedor frontend Jr., criando e mantendo a aplicação web de pacotes de viagens com ReactTS e TypeScript. Realizei integrações com várias APIs externas para manter a plataforma atualizada e assegurei a segurança dos dados dos usuários, focando em autenticação e autorização. Aprendi a importância de escrever código limpo e modular e a seguir as melhores práticas de segurança, o que foi crucial para meu crescimento profissional e me preparou para futuros desafios.
-      `,
-      image: LuckyViagens,
-    },
-    {
-      title: "Desenvolvedor Front-end JR",
-      company: "Otur Viagens",
-      period: "janeiro de 2023 - fevereiro de 2024 (1 ano 2 meses)",
-      location: "Caruaru, Pernambuco, Brasil",
-      description: `
-        No projeto da Otur Viagens, desenvolvi e mantive a aplicação web de pacotes de viagens, utilizando ReactTS e TypeScript para criar interfaces dinâmicas e integrar APIs externas. Criei interfaces específicas para usuários finais e administradores, implementando sistemas de autenticação seguros e rotas privadas para garantir o acesso autorizado. A estilização responsiva foi feita com Tailwind CSS e a usabilidade aprimorada.
-      `,
-      image: OturViagem,
-    },
-    {
-      title: "Desenvolvedor Front-end JR",
-      company: "Alpha Sistema",
-      period: "março de 2024 - abril de 2024 (2 meses)",
-      location: "Caruaru, Pernambuco, Brasil",
-      description: `
-        No projeto da Alpha sistema, fui intregado no time na etapa final do ciclo de desenvolvimento , focando em novas funcionalidades e correção de bugs em áreas críticas como produtos, clientes, fornecedores, estoque, vendas, finanças e relatórios. Assegurei a responsividade do site com Tailwind CSS e melhorei a acessibilidade em dispositivos móveis. Otimizei rotas e integrei APIs externas, utilizando bibliotecas JavaScript como axios, react-router-dom, e react-pdf.
-      `,
-      image: AlphaWeb,
-    },
-    {
-      title: "Desenvolvedor Front-end JR",
-      company: "D-GYM",
-      period: "abril de 2024 - abril de 2024 (1 mês)",
-      location: "São Paulo, Brasil",
-      description:
-        "Trabalhei na criação e manutenção de interfaces responsivas com React e Tailwind CSS, colaborando com equipes de design para implementar soluções inovadoras. Como membro chave da equipe de desenvolvimento, defini a estrutura e arquitetura do repositório do projeto com ReactJS e TypeScript, integrando APIs externas. Criei interfaces intuitivas para membros, instrutores e administradores, facilitando cadastro de aulas, agendamento de sessões e exibição de atividades em um calendário interativo.",
-      image: DgymWeb,
-    },
-  ];
-
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const handleNext = () => {
     if (currentJobIndex < jobs.length - 1) {
       setDirection(1);
-      setCurrentJobIndex(currentJobIndex + 1);
+      setCurrentJobIndex((prev) => prev + 1);
     }
   };
 
   const handlePrevious = () => {
     if (currentJobIndex > 0) {
       setDirection(-1);
-      setCurrentJobIndex(currentJobIndex - 1);
+      setCurrentJobIndex((prev) => prev - 1);
     }
   };
 
-  const { title, company, period, location, description, image } =
-    jobs[currentJobIndex];
+  const currentJob = jobs[currentJobIndex];
 
   return (
     <section
-      className="container mx-auto p-6 max-w-7xl text-white bg-gradient-to-r bg-[#1e1e28]  rounded-lg shadow-lg ransform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 h-auto"
       id="trabalhos"
+      className="
+        container mx-auto max-w-7xl
+        px-4 sm:px-6 lg:px-8
+        py-10 sm:py-12 lg:py-16
+        text-white bg-[#1e1e28]
+        rounded-none sm:rounded-lg
+      "
     >
-      <h2 className="text-4xl font-bold text-center mb-6">
-        <span className="text-[#fca61e]">Minhas</span> Experiências
-      </h2>
-
-      <div className="flex flex-col items-center space-y-6 md:space-y-0 md:flex-row md:space-x-6 mx-auto  p-2">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={currentJobIndex}
-            custom={direction}
-            initial={{ x: direction > 40 ? 80 : -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="bg-[#1e1e28] h-auto  p-4 rounded-lg flex flex-col items-center responsive-work-container"
-          >
-            <div className="flex flex-row items-centerjustify-center space-y-6 responsive-work gap-5 mb-5 ">
-              <div className="w-full mb-4  bg-white">
-                <Image
-                  src={image}
-                  alt={title}
-                  width={600}
-                  className="rounded-lg"
-                />
-              </div>
-
-              <div className="max-w-xl responsive-work-text">
-                <h3 className="text-2xl font-bold mb-1 text-[#fca61e] ">
-                  {title}
-                </h3>
-                <h4 className="text-xl text-gray-400 mb-2">{company}</h4>
-                <p className="text-sm text-gray-500">{period}</p>
-                <p className="text-sm text-gray-500 mb-4">{location}</p>
-                <p className="text-lg text-gray-300 ">{description}</p>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+      {/* TÍTULO */}
+      <div className="flex flex-col items-center gap-3 mb-8 text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <span className="text-[#fca61e]">Minhas</span> Experiências
+        </h2>
+        <p className="text-xs sm:text-sm md:text-base text-white/60 max-w-2xl">
+          Um resumo das empresas em que atuei como desenvolvedor front-end JR,
+          com foco em produtos digitais, performance e experiência do usuário.
+        </p>
       </div>
 
-      <div className="w-full flex justify-center items-center gap-8 p-4 mt-7 ">
-        <button
-          onClick={handlePrevious}
-          className="text-[#17171d] bg-[#fca61e] p-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50"
-          disabled={currentJobIndex === 0}
-        >
-          <IoIosArrowBack className="text-3xl" />
-        </button>
+      {/* CARD PRINCIPAL */}
+      <div className="flex flex-col items-center">
+        <div className="w-full">
+          <AnimatePresence initial={false} mode="wait" custom={direction}>
+            <motion.div
+              key={currentJobIndex}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="
+                rounded-2xl 
+                p-4 sm:p-6 md:p-8
+                flex flex-col md:flex-row
+                gap-6 md:gap-8
+              "
+            >
+            
+              <div className="md:w-1/2 w-full">
+                <div
+                  className="
+                    relative w-full
+                    aspect-[16/9]   /* mesmo tamanho para todas as imagens */
+                    overflow-hidden rounded-2xl
+                    shadow-lg shadow-black/40
+                  "
+                >
+                  <Image
+                    src={currentJob.image}
+                    alt={currentJob.title}
+                    fill
+                    sizes="(min-width:1024px) 40vw, 100vw"
+                    className="object-cover"
+                    priority={currentJobIndex === 0}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </div>
 
-        <button
-          onClick={handleNext}
-          className="text-[#17171d] bg-[#fca61e] p-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50"
-          disabled={currentJobIndex === jobs.length - 1}
-        >
-          <IoIosArrowForward className="text-3xl" />
-        </button>
-      </div>
+              
+              <div className="md:w-1/2 w-full flex flex-col justify-between">
+                <div className="space-y-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#fca61e]">
+                    {currentJob.title}
+                  </h3>
+                  <h4 className="text-lg md:text-xl text-white font-semibold">
+                    {currentJob.company}
+                  </h4>
 
-      <div className="flex justify-center mt-6 space-x-2 ">
-        {jobs.map((_, index) => (
-          <div
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              index === currentJobIndex
-                ? "bg-[#fca61e]"
-                : "bg-gray-600 hover:bg-gray-400"
-            } cursor-pointer transition-all duration-300`}
-            onClick={() => setCurrentJobIndex(index)}
-          ></div>
-        ))}
+                  <div className="flex flex-wrap gap-2 mt-2 text-[11px] sm:text-xs md:text-sm">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/80">
+                      {currentJob.period}
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-[#fca61e]/10 border border-[#fca61e]/40 text-[#fca61e]">
+                      {currentJob.location}
+                    </span>
+                  </div>
+
+                  <p className="mt-4 text-xs sm:text-sm md:text-base leading-relaxed text-white/80 whitespace-pre-line">
+                    {currentJob.description}
+                  </p>
+                </div>
+
+              
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <span className="text-[11px] sm:text-xs md:text-sm text-white/40">
+                    {currentJobIndex + 1} de {jobs.length} experiências
+                  </span>
+
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <button
+                      onClick={handlePrevious}
+                      className="
+                        flex items-center justify-center
+                        text-[#17171d] bg-[#fca61e]
+                        w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
+                        rounded-full shadow-md hover:bg-[#fbb244]
+                        transition duration-300 disabled:opacity-40
+                      "
+                      disabled={currentJobIndex === 0}
+                      aria-label="Experiência anterior"
+                    >
+                      <IoIosArrowBack className="text-xl sm:text-2xl" />
+                    </button>
+
+                    <button
+                      onClick={handleNext}
+                      className="
+                        flex items-center justify-center
+                        text-[#17171d] bg-[#fca61e]
+                        w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
+                        rounded-full shadow-md hover:bg-[#fbb244]
+                        transition duration-300 disabled:opacity-40
+                      "
+                      disabled={currentJobIndex === jobs.length - 1}
+                      aria-label="Próxima experiência"
+                    >
+                      <IoIosArrowForward className="text-xl sm:text-2xl" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="flex justify-center mt-6 space-x-2">
+          {jobs.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setDirection(index > currentJobIndex ? 1 : -1);
+                setCurrentJobIndex(index);
+              }}
+              className={`
+                h-2.5 rounded-full transition-all duration-300
+                ${
+                  index === currentJobIndex
+                    ? "w-6 bg-[#fca61e]"
+                    : "w-2.5 bg-gray-600 hover:bg-gray-400"
+                }
+              `}
+              aria-label={`Ir para experiência ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

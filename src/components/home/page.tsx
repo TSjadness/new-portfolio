@@ -1,15 +1,10 @@
-import React from 'react'
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  Transition,
-} from "@headlessui/react";
-import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
+import React from "react";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+
 import aboutfoto from "@/images/logo-about.png";
-import Image from 'next/image';
-import photo from "@/images/foto-person.png"
+import photo from "@/images/foto-person.png";
 
 const user = {
   name: "Jadson Tavares Santos",
@@ -17,136 +12,150 @@ const user = {
 };
 
 const navigation = [
-  { name: "Home", href: "#home", current: false },
+  { name: "Home", href: "#home", current: true },
   { name: "Projetos", href: "#projetos", current: false },
-  {name: "Trabalhos", href: "#trabalhos", current: false},
+  { name: "Trabalhos", href: "#trabalhos", current: false },
   { name: "Sobre mim", href: "#sobre-mim", current: false },
   { name: "Contato", href: "#contato", current: false },
 ];
 
-
-function classNames(...classes: string[]) {
+function classNames(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function HomePage() {
   return (
-    <>
-      <div className="min-h-full">
-        <Disclosure as="nav" className="bg-[#131318] text-[#fca61e]">
-          {({ open }) => (
-            <>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="hidden sm:flex items-center flex-shrink-0">
-                      <a href="/">
-                        <Image
-                          src={aboutfoto}
-                          alt="about foto"
-                          width={100}
-                          height={100}
-                        />
-                      </a>
-                    </div>
-                    <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
-                        {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? " text-[#fca61e]"
-                                : "text-gray-300 hover:border-b hover:border-[#fca61e] hover:text-[#fca61e]",
-                              "px-3 py-2 text-md font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+    <div className="min-h-full">
+      <Disclosure
+        as="nav"
+        className="
+          sticky top-0 z-50
+          bg-[#0b0b12]/90
+          backdrop-blur-md
+          border-b border-white/5
+          text-[#fca61e]
+        "
+      >
+        {({ open }) => (
+          <>
+            {/* DESKTOP BAR */}
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex h-16 items-center justify-between">
+                {/* ESQUERDA – LOGO + NAV */}
+                <div className="flex items-center gap-6">
+                  {/* Logo */}
+                  <a href="/" className="flex items-center flex-shrink-0">
+                    <Image
+                      src={aboutfoto}
+                      alt="Logo Jadson"
+                      width={100}
+                      height={32}
+                      className="h-8 w-auto"
+                    />
+                  </a>
+
+                  {/* Links desktop */}
                   <div className="hidden md:block">
-                    <div className="ml-4 flex items-center md:ml-6">
-                      <Menu as="div" className="relative ml-3">
-                        <Transition
-                          enter="transition ease-out duration-100"
-                          enterFrom="transform opacity-0 scale-95"
-                          enterTo="transform opacity-100 scale-100"
-                          leave="transition ease-in duration-75"
-                          leaveFrom="transform opacity-100 scale-100"
-                          leaveTo="transform opacity-0 scale-95"
-                        ></Transition>
-                      </Menu>
+                    <div className="flex items-center space-x-4">
+                      {navigation.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current
+                              ? "text-[#fca61e]"
+                              : "text-gray-300 hover:text-[#fca61e]",
+                            "px-3 py-2 text-sm font-medium transition-colors"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
                     </div>
                   </div>
-                  <div className="-mr-2 flex md:hidden">
-                    <DisclosureButton className="relative inline-flex items-center justify-center rounded-md  p-2 border border-[#fca61e] text-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-outfocus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="absolute -inset-0.5" />
-                      <span className="sr-only">Abrir menu</span>
-                      {open ? (
-                        <XMarkIcon
-                          className="block h-6 w-6"
-                          aria-hidden="true"
-                        />
-                      ) : (
-                        <Bars3Icon
-                          className="block h-6 w-6"
-                          aria-hidden="true"
-                        />
-                      )}
-                    </DisclosureButton>
-                  </div>
+                </div>
+
+                {/* DIREITA – BOTÃO MOBILE */}
+                <div className="-mr-2 flex md:hidden">
+                  <Disclosure.Button
+                    className="
+                      relative inline-flex items-center justify-center
+                      rounded-md p-2
+                      border border-[#fca61e]
+                      text-[#fca61e]
+                      hover:bg-[#fca61e] hover:text-[#17171d]
+                      focus:outline-none focus:ring-2 focus:ring-white
+                      focus:ring-offset-2 focus:ring-offset-gray-800
+                      transition duration-300
+                    "
+                  >
+                    <span className="sr-only">Abrir menu</span>
+                    {open ? (
+                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    )}
+                  </Disclosure.Button>
                 </div>
               </div>
+            </div>
 
-              <DisclosurePanel className="md:hidden">
-                <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 text-[#fca61e]">
-                  {navigation.map((item) => (
-                    <DisclosureButton
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-[#fca61e]"
-                          : "text-[#fca61e] hover:bg-gray-700 hover:text-white",
-                        "block rounded-md px-3 py-2 text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </DisclosureButton>
-                  ))}
-                </div>
-                <div className="border-t border-gray-700 pb-3 pt-4">
-                  <div className="flex items-center px-5">
-                    <div className="flex-shrink-0">
-                      <Image
-                        src={photo}
-                        width={50}
-                        height={50}
-                        alt="Picture of the author"
-                      />
+            {/* MOBILE PANEL */}
+            <Disclosure.Panel
+              className="
+                md:hidden
+                bg-[#131318]
+                border-t border-white/10
+                shadow-xl shadow-black/40
+              "
+            >
+              {/* Links mobile */}
+              <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 text-[#fca61e]">
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as="a"
+                    href={item.href}
+                    className={classNames(
+                      item.current
+                        ? "bg-[#fca61e]/10 text-[#fca61e]"
+                        : "text-[#fca61e] hover:bg-white/5 hover:text-white",
+                      "block rounded-md px-3 py-2 text-base font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
+              </div>
+
+              {/* Perfil resumido */}
+              {/* <div className="border-t border-white/10 pb-3 pt-4">
+                <div className="flex items-center px-5 gap-3">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={photo}
+                      width={48}
+                      height={48}
+                      alt="Foto de Jadson"
+                      className="rounded-full border border-[#fca61e]/60"
+                    />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold leading-none text-white">
+                      {user.name}
                     </div>
-                    <div className="ml-3">
-                      <div className="text-base font-medium leading-none ">
-                        {user.name}
-                      </div>
-                      <div className="text-sm font-medium leading-none text-gray-400">
-                        {user.email}
-                      </div>
+                    <div className="text-xs font-medium leading-none text-gray-400 break-all">
+                      {user.email}
                     </div>
                   </div>
                 </div>
-              </DisclosurePanel>
-            </>
-          )}
-        </Disclosure>
-      </div>
-    </>
+              </div> */}
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+    </div>
   );
 }

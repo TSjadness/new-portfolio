@@ -2,25 +2,25 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedinIn, FaInstagram, FaWhatsapp, FaMapMarkerAlt  } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 import "animate.css/animate.min.css";
 
 const ContactPage = () => {
-
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [isSending, setIsSending] = useState(false);
 
-  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceId = "service_ja3fwu8";
     const templateId = "template_oeja6ur";
     const publicKey = "gduhDXS1xDFUQuU_j";
+
     const templateParams: Record<string, unknown> = {
       from_name: name,
       from_email: email,
@@ -28,168 +28,298 @@ const ContactPage = () => {
       message: message,
     };
 
+    setIsSending(true);
+
     emailjs
       .send(serviceId, templateId, templateParams as any, publicKey)
-      .then((response) => {
+      .then(() => {
         alert("Email enviado com sucesso!");
         setName("");
         setEmail("");
         setMessage("");
       })
-      .catch((error) => {
-      });
+      .catch(() => {
+        alert("Ocorreu um erro ao enviar o e-mail. Tente novamente.");
+      })
+      .finally(() => setIsSending(false));
   };
 
-
   return (
-    <div className="container mb-24 mt-20 p-5 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white rounded-lg bg-[#1e1e28] transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10">
-      <div className="p-2">
-        <section
-          className="container mb-10 mt-20 w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white transform transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-10 animate__animated animate__fadeInUp "
-          id="contato"
-        >
-          <div className="flex flex-row gap-10 responsive-about-two ">
-            <div className="w-full flex flex-col responsive-about-text">
-              <div className="responsive-contact">
-                <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
-                  Entre em Contato
-                </h1>
-                <p className="mb-4 text-lg max-w-md font-semibold leading-6 text-start">
-                  Gostaria de fechar um trabalhar ou tem alguma dúvida? Envie
-                  uma mensagem ou entre em contato através das redes sociais
-                  abaixo.
-                </p>
-              </div>
+    <section
+      id="contato"
+      className="
+        bg-[#0f0f17]
+        text-white
+      "
+    >
+      <div
+        className="
+          container mx-auto max-w-7xl
+          px-4 sm:px-6 lg:px-2
+          py-16 lg:py-20
+          animate__animated animate__fadeInUp
+        "
+      >
+        {/* Título */}
+        <div className="text-center mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
+            Entre em <span className="text-[#fca61e]">Contato</span>
+          </h1>
+          <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto">
+            Quer fechar um projeto, tirar uma dúvida ou trocar uma ideia sobre
+            desenvolvimento? Preencha o formulário ou fale comigo pelos canais
+            abaixo.
+          </p>
+        </div>
 
-              <form
-                className="mb-4 responsive-about-list"
-                onSubmit={handleSubmit}
-              >
+        {/* Grid principal */}
+        <div className="grid gap-10 lg:grid-cols-[3fr,2fr] items-start">
+          {/* FORMULÁRIO */}
+          <div
+            className="
+              bg-[#171721] border border-white/5
+              rounded-2xl p-5 sm:p-6 md:p-8
+              shadow-xl shadow-black/40
+            "
+          >
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+              Fale comigo
+            </h2>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs sm:text-sm text-white/60 mb-1">
+                  Nome
+                </label>
                 <input
                   type="text"
                   value={name}
                   placeholder="Seu nome"
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
+                  className="
+                    w-full rounded-lg px-3 py-2.5 sm:py-3
+                    bg-[#1e1e28] border border-white/10
+                    text-sm sm:text-base
+                    focus:outline-none focus:border-[#fca61e] focus:ring-2 focus:ring-[#fca61e]/40
+                    transition
+                  "
                   required
                 />
+              </div>
+
+              <div>
+                <label className="block text-xs sm:text-sm text-white/60 mb-1">
+                  E-mail
+                </label>
                 <input
                   type="email"
                   value={email}
-                  placeholder="Seu email"
+                  placeholder="Seu e-mail"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
+                  className="
+                    w-full rounded-lg px-3 py-2.5 sm:py-3
+                    bg-[#1e1e28] border border-white/10
+                    text-sm sm:text-base
+                    focus:outline-none focus:border-[#fca61e] focus:ring-2 focus:ring-[#fca61e]/40
+                    transition
+                  "
                   required
                 />
+              </div>
+
+              <div>
+                <label className="block text-xs sm:text-sm text-white/60 mb-1">
+                  Mensagem
+                </label>
                 <textarea
                   value={message}
-                  placeholder="Sua mensagem"
+                  placeholder="Conte um pouco sobre o que você precisa…"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full mb-4 p-2 rounded-lg bg-[#1e1e28] text-white border border-[#fca61e] focus:outline-none"
                   rows={5}
+                  className="
+                    w-full rounded-lg px-3 py-2.5 sm:py-3
+                    bg-[#1e1e28] border border-white/10
+                    text-sm sm:text-base
+                    focus:outline-none focus:border-[#fca61e] focus:ring-2 focus:ring-[#fca61e]/40
+                    transition resize-none
+                  "
                   required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="text-[#fca61e] py-4 px-8 font-semibold rounded-full border border-[#fca61e] hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out "
-                >
-                  Enviar Mensagem
-                </button>
-              </form>
+                />
+              </div>
 
-              <div className="flex flex-row gap-5 justify-start items-center responsive-about-list">
-                <div>
-                  <ul className="flex flex-row gap-5 justify-center items-center">
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/jadson-tavares-santos-7aba7b24b/"
-                        title="Ir para o LinkedIn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaLinkedinIn className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://api.whatsapp.com/send/?phone=5579999059254&text&type=phone_number&app_absent=0"
-                        title="Enviar mensagem no WhatsApp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaWhatsapp className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/TSjadness"
-                        title="Ir para o GitHub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IoLogoGithub className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/jadson_ts/"
-                        title="Ir para o Instagram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaInstagram className="text-4xl text-[#fca61e] border border-[#fca61e] rounded-full py-2 hover:bg-[#fca61e] hover:text-[#17171d] transition duration-500 ease-in-out" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <button
+                type="submit"
+                disabled={isSending}
+                className="
+                  w-full sm:w-auto
+                  inline-flex items-center justify-center
+                  gap-2
+                  text-sm sm:text-base font-semibold
+                  px-6 sm:px-8 py-3
+                  rounded-full border border-[#fca61e]
+                  text-[#fca61e]
+                  hover:bg-[#fca61e] hover:text-[#17171d]
+                  disabled:opacity-60 disabled:cursor-not-allowed
+                  transition duration-300
+                "
+              >
+                {isSending ? "Enviando..." : "Enviar mensagem"}
+              </button>
+            </form>
+          </div>
+
+          {/* CONTATOS E REDES */}
+          <div className="space-y-6">
+            {/* Bloco telefone */}
+            <div
+              className="
+                bg-[#171721] border border-white/5
+                rounded-2xl p-5 sm:p-6
+                flex items-center gap-4 sm:gap-5
+                shadow-lg shadow-black/40
+              "
+            >
+              <div
+                className="
+                  w-14 h-14 sm:w-16 sm:h-16
+                  flex items-center justify-center
+                  rounded-xl bg-[#27272c]
+                "
+              >
+                <BsTelephoneFill className="text-2xl text-[#fca61e]" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs sm:text-sm text-white/60 font-semibold">
+                  Telefone / WhatsApp
+                </span>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5579999059254&text&type=phone_number&app_absent=0"
+                  className="text-base sm:text-lg font-semibold hover:text-[#fca61e] transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (+55) 79 99905-9254
+                </a>
               </div>
             </div>
 
-            <div className=" w-full flex flex-col justify-start items-start p-5 responsive-contact-image animate__animated animate__fadeIn responsive-contact-item ">
-              <div className="flex items-center mb-8 gap-5 responsive-about-Text exclusive">
-                <BsTelephoneFill className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
-
-                <div className="flex flex-col">
-                  <span className="text-lg text-white/60 font-semibold">
-                    Telefone e WhatsApp
-                  </span>
-                  <span className="text-2xl sm:text-xl text-white font-semibold">
-                    (+55) 79 99905-9254
-                  </span>
-                </div>
+            {/* Bloco e-mail */}
+            <div
+              className="
+                bg-[#171721] border border-white/5
+                rounded-2xl p-5 sm:p-6
+                flex items-center gap-4 sm:gap-5
+                shadow-lg shadow-black/40
+              "
+            >
+              <div
+                className="
+                  w-14 h-14 sm:w-16 sm:h-16
+                  flex items-center justify-center
+                  rounded-xl bg-[#27272c]
+                "
+              >
+                <MdEmail className="text-2xl text-[#fca61e]" />
               </div>
-
-              <div className="flex items-center mb-8 gap-5 responsive-about-Text">
-                <MdEmail className="w-20 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
-
-                <div className="flex flex-col">
-                  <span className="text-lg text-white/60 font-semibold">
-                    Email
-                  </span>
-                  <span className="text-2xl sm:text-xl text-white font-semibold">
-                    jadsonts2012@gmail.com
-                  </span>
-                </div>
+              <div className="flex flex-col">
+                <span className="text-xs sm:text-sm text-white/60 font-semibold">
+                  E-mail
+                </span>
+                <a
+                  href="mailto:jadsonts2012@gmail.com"
+                  className="text-base sm:text-lg font-semibold hover:text-[#fca61e] transition break-all"
+                >
+                  jadsonts2012@gmail.com
+                </a>
               </div>
+            </div>
 
-              <div className="flex items-center mb-8 gap-5 responsive-about-Text ">
-                <FaMapMarkerAlt className="w-24 h-20  text-3xl text-[#fca61e]  bg-[#27272c] p-4 rounded-lg " />
+            {/* Redes sociais */}
+            <div
+              className="
+                bg-[#171721] border border-white/5
+                rounded-2xl p-5 sm:p-6
+                shadow-lg shadow-black/40
+              "
+            >
+              <span className="block text-xs sm:text-sm text-white/60 font-semibold mb-3">
+                Redes sociais
+              </span>
 
-                <div className="flex flex-col">
-                  <span className="text-lg text-white/60 font-semibold">
-                    Endereço
-                  </span>
-                  <span className="text-2xl sm:text-xl text-white font-semibold">
-                    Rua Paulo Pereira da Silva, 33, 49503-220, Itabaiana,
-                    Sergipe
-                  </span>
-                </div>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://www.linkedin.com/in/jadson-tavares-santos-7aba7b24b/"
+                  title="Ir para o LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    w-11 h-11 sm:w-12 sm:h-12
+                    flex items-center justify-center
+                    rounded-full border border-[#fca61e]
+                    text-[#fca61e]
+                    hover:bg-[#fca61e] hover:text-[#17171d]
+                    transition duration-300
+                  "
+                >
+                  <FaLinkedinIn className="text-xl" />
+                </a>
+
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5579999059254&text&type=phone_number&app_absent=0"
+                  title="Enviar mensagem no WhatsApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    w-11 h-11 sm:w-12 sm:h-12
+                    flex items-center justify-center
+                    rounded-full border border-[#fca61e]
+                    text-[#fca61e]
+                    hover:bg-[#fca61e] hover:text-[#17171d]
+                    transition duration-300
+                  "
+                >
+                  <FaWhatsapp className="text-xl" />
+                </a>
+
+                <a
+                  href="https://github.com/TSjadness"
+                  title="Ir para o GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    w-11 h-11 sm:w-12 sm:h-12
+                    flex items-center justify-center
+                    rounded-full border border-[#fca61e]
+                    text-[#fca61e]
+                    hover:bg-[#fca61e] hover:text-[#17171d]
+                    transition duration-300
+                  "
+                >
+                  <IoLogoGithub className="text-xl" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/jadson_ts/"
+                  title="Ir para o Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    w-11 h-11 sm:w-12 sm:h-12
+                    flex items-center justify-center
+                    rounded-full border border-[#fca61e]
+                    text-[#fca61e]
+                    hover:bg-[#fca61e] hover:text-[#17171d]
+                    transition duration-300
+                  "
+                >
+                  <FaInstagram className="text-xl" />
+                </a>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
